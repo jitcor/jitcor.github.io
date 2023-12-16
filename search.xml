@@ -23,9 +23,13 @@
 </ul>
 <h2 id="具体搭建过程"><a href="#具体搭建过程" class="headerlink" title="具体搭建过程"></a>具体搭建过程</h2><p>大部分参考的这一教程：<a href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo搭建个人博客网站，史上最全教程</a><br>，唯一改动的就是主题换成了安知鱼，难点主要是nodejs使用,hexo使用,github一键部署</p>
 <h3 id="安知鱼主题"><a href="#安知鱼主题" class="headerlink" title="安知鱼主题"></a>安知鱼主题</h3><p>文档：<a href="https://docs.anheyu.com/intro.html">https://docs.anheyu.com/intro.html</a></p>
-<h3 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h3><p>hexo的安装没啥难的，正常执行命令安装就行<code>npm install -g hexo-cli</code>，这里加<code>-g</code>会将hexo安装到nodejs全局模块里，<br>因此需要把全局模块的路径加到系统环境路径里，否则会找不到hexo命令，我的hexo是安装到如下位置(<br>这个位置不是固定的，可以自己通过nodejs命令指定)<br><img src="./node_module_hexo.png" alt="image"><br>这里hexo.ps1被重命名了，我的Window10系统会优先识别该文件，但Window10系统里该格式默认是不支持执行的，所以只能重命名，让其识别到hexo.cmd命令</p>
+<h3 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h3><p>hexo的安装没啥难的，正常执行命令安装就行<code>npm install -g hexo-cli</code>，这里加<code>-g</code>会将hexo安装到nodejs全局模块里，<br>因此需要把全局模块的路径加到系统环境路径里，否则会找不到hexo命令，我的hexo是安装到如下位置(<br>这个位置不是固定的，可以自己通过nodejs命令指定)  </p>
+<img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png" class="" title="image">  
+<p>这里hexo.ps1被重命名了，我的Window10系统会优先识别该文件，但Window10系统里该格式默认是不支持执行的，所以只能重命名，让其识别到hexo.cmd命令</p>
 <h3 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h3><p>使用直接看<a href="https://twikoo.js.org/quick-start.html">官网</a>就行，教程很详细<br>其中最推荐的是Netlify和Hugging Face 部署，不过实际测试，Netlify有点坑，注册过不去，检测太严格，还是Hugging<br>Face比较好用，至于MongoDB的步骤没啥问题<br>然后将最后生成的<a href="https://xxxx.hf.space复制到配置里的envid即可/">https://xxxx.hf.space复制到配置里的envId即可</a></p>
-<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><h2 id="github-pages-安全机制"><a href="#github-pages-安全机制" class="headerlink" title="github pages 安全机制"></a>github pages 安全机制</h2><p><img src="./gh-pages-sec.png" alt="image"></p>
+<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><h2 id="github-pages-安全机制"><a href="#github-pages-安全机制" class="headerlink" title="github pages 安全机制"></a>github pages 安全机制</h2><img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png" class="" title="image">
+
+
 <h2 id="填坑"><a href="#填坑" class="headerlink" title="填坑"></a>填坑</h2><ul>
 <li><code>fatal: could not read Username for &#39;https://github.com&#39;: No such device or address</code></li>
 </ul>
