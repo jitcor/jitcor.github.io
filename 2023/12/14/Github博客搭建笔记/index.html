@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jitcor.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="基本环境 Github博客主页逐鹿  博客主题anzhiyu  hexo 7.0.0  nodejs 16.17.1  webstorm 2023.2  vscode 1.85.1  actions-gh-pages v3  Window 10   具体搭建过程大部分参考的这一教程：GitHub Pages + Hexo搭建个人博客网站，史上最全教程，唯一改动的就是主题换成了安知鱼，难点主要是no">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github博客搭建笔记">
+<meta property="og:url" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="逐鹿">
+<meta property="og:description" content="基本环境 Github博客主页逐鹿  博客主题anzhiyu  hexo 7.0.0  nodejs 16.17.1  webstorm 2023.2  vscode 1.85.1  actions-gh-pages v3  Window 10   具体搭建过程大部分参考的这一教程：GitHub Pages + Hexo搭建个人博客网站，史上最全教程，唯一改动的就是主题换成了安知鱼，难点主要是no">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png">
+<meta property="og:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png">
+<meta property="article:published_time" content="2023-12-14T09:55:31.000Z">
+<meta property="article:modified_time" content="2023-12-16T16:21:05.228Z">
+<meta property="article:author" content="jitcor">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png">
+
+
+<link rel="canonical" href="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/","path":"2023/12/14/Github博客搭建笔记/","title":"Github博客搭建笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Github博客搭建笔记 | 逐鹿</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5CSTBHGJ8"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-C5CSTBHGJ8","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?79e9f64b8947fd51b7be8302569643bf"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">逐鹿</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">晴耕雨读，心灯不夜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">基本环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">具体搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">安知鱼主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HEXO"><span class="nav-number">2.2.</span> <span class="nav-text">HEXO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Twikoo"><span class="nav-number">2.3.</span> <span class="nav-text">Twikoo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87"><span class="nav-number">2.4.</span> <span class="nav-text">图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github-pages-%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">github pages 安全机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%AB%E5%9D%91"><span class="nav-number">4.</span> <span class="nav-text">填坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86"><span class="nav-number">5.</span> <span class="nav-text">博客加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-blog-encrypt"><span class="nav-number">5.1.</span> <span class="nav-text">hexo-blog-encrypt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99"><span class="nav-number">6.</span> <span class="nav-text">博客编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VSCode"><span class="nav-number">6.1.</span> <span class="nav-text">VSCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebStorm"><span class="nav-number">6.2.</span> <span class="nav-text">WebStorm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typecho"><span class="nav-number">6.3.</span> <span class="nav-text">Typecho</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">备用主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">jitcor</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jitcor" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jitcor" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="jitcor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Github博客搭建笔记 | 逐鹿">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Github博客搭建笔记<a href="https://github.com/jitcor/jitcor-blog/tree/main/source/_posts/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-14 17:55:31" itemprop="dateCreated datePublished" datetime="2023-12-14T17:55:31+08:00">2023-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-17 00:21:05" itemprop="dateModified" datetime="2023-12-17T00:21:05+08:00">2023-12-17</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span id="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" class="post-meta-item twikoo_visitors" data-flag-title="Github博客搭建笔记" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="twikoo_visitors"></span>
+    </span>
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><ul>
+<li><p>Github博客主页<br><a href="https://jitcor.github.io/">逐鹿</a></p>
+</li>
+<li><p>博客主题<br><a target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">anzhiyu</a></p>
+</li>
+<li><p>hexo 7.0.0</p>
+</li>
+<li><p>nodejs 16.17.1</p>
+</li>
+<li><p>webstorm 2023.2</p>
+</li>
+<li><p>vscode 1.85.1</p>
+</li>
+<li><p>actions-gh-pages v3</p>
+</li>
+<li><p>Window 10</p>
+</li>
+</ul>
+<h2 id="具体搭建过程"><a href="#具体搭建过程" class="headerlink" title="具体搭建过程"></a>具体搭建过程</h2><p>大部分参考的这一教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo搭建个人博客网站，史上最全教程</a><br>，唯一改动的就是主题换成了安知鱼，难点主要是nodejs使用,hexo使用,github一键部署</p>
+<h3 id="安知鱼主题"><a href="#安知鱼主题" class="headerlink" title="安知鱼主题"></a>安知鱼主题</h3><p>文档：<a target="_blank" rel="noopener" href="https://docs.anheyu.com/intro.html">https://docs.anheyu.com/intro.html</a></p>
+<h3 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h3><p>hexo的安装没啥难的，正常执行命令安装就行<code>npm install -g hexo-cli</code>，这里加<code>-g</code>会将hexo安装到nodejs全局模块里，<br>因此需要把全局模块的路径加到系统环境路径里，否则会找不到hexo命令，我的hexo是安装到如下位置(<br>这个位置不是固定的，可以自己通过nodejs命令指定)  </p>
+<img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png" class="" title="image">  
+<p>这里hexo.ps1被重命名了，我的Window10系统会优先识别该文件，但Window10系统里该格式默认是不支持执行的，所以只能重命名，让其识别到hexo.cmd命令</p>
+<h3 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h3><p>使用直接看<a target="_blank" rel="noopener" href="https://twikoo.js.org/quick-start.html">官网</a>就行，教程很详细<br>其中最推荐的是Netlify和Hugging Face 部署，不过实际测试，Netlify有点坑，注册过不去，检测太严格，还是Hugging<br>Face比较好用，至于MongoDB的步骤没啥问题<br>然后将最后生成的<a target="_blank" rel="noopener" href="https://xxxx.hf.space复制到配置里的envid即可/">https://xxxx.hf.space复制到配置里的envId即可</a></p>
+<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><h2 id="github-pages-安全机制"><a href="#github-pages-安全机制" class="headerlink" title="github pages 安全机制"></a>github pages 安全机制</h2><img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png" class="" title="image">
+
+
+<h2 id="填坑"><a href="#填坑" class="headerlink" title="填坑"></a>填坑</h2><ul>
+<li><code>fatal: could not read Username for &#39;https://github.com&#39;: No such device or address</code></li>
+</ul>
+<blockquote>
+<p>需要输入密码，但actions不显示界面，所以报没有设备，解决办法就是采用SSH机制，切换到peaceiris&#x2F;actions-gh-pages部署方式</p>
+</blockquote>
+<ul>
+<li><code>Cannot read properties of null (reading &#39;matches&#39;)</code></li>
+</ul>
+<blockquote>
+<p>看参考</p>
+</blockquote>
+<ul>
+<li><p><code>Cannot find module &#39;hexo-util&#39;</code></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/issues/1480">https://github.com/iissnan/hexo-theme-next/issues/1480</a></p>
+</blockquote>
+</li>
+<li><p><code>FATAL can not read a block mapping entry解决办法</code></p>
+<blockquote>
+<p>看参考</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="博客加密"><a href="#博客加密" class="headerlink" title="博客加密"></a>博客加密</h2><h3 id="hexo-blog-encrypt"><a href="#hexo-blog-encrypt" class="headerlink" title="hexo-blog-encrypt"></a>hexo-blog-encrypt</h3><h2 id="博客编写"><a href="#博客编写" class="headerlink" title="博客编写"></a>博客编写</h2><h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><h3 id="WebStorm"><a href="#WebStorm" class="headerlink" title="WebStorm"></a>WebStorm</h3><h3 id="Typecho"><a href="#Typecho" class="headerlink" title="Typecho"></a>Typecho</h3><h2 id="备用主题"><a href="#备用主题" class="headerlink" title="备用主题"></a>备用主题</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">安知鱼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/auroral-ui/hexo-theme-aurora">aurora</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">bamboo</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/niemingzhao/niemingzhao.github.io/tree/theme">MDUI</a>‘</li>
+<li><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo搭建个人博客网站，史上最全教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/all-smile/p/16608503.html">Hexo+GitHub搭建个人博客，实现云端编辑、一键发文</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">peaceiris&#x2F;actions-gh-pages</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21808961/article/details/84476504">hexo d命令报错 ERROR Deployer not found: git</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/p1767158841/article/details/127685756">当遇到：npm ERR Cannot read properties of null (reading ‘matches‘) 问题时</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44318830/article/details/104884936">Hexo启动页面显示extends includes&#x2F;layout.pug block content include includes&#x2F;recent-posts.pug include</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/aa936a8369fb">使用hexo theme Butterfly 报错</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.itfanr.cc/2021/04/16/hexo-blog-article-encryption/">Hexo博客文章加密</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/feinifi/article/details/64204687">FATAL can not read a block mapping entry解决办法</a></li>
+<li><a target="_blank" rel="noopener" href="https://xydche.github.io/posts/ef3aa99.html">hexo部署后是空白页</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/github/" rel="tag"># github</a>
+              <a href="/tags/blog/" rel="tag"># blog</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/12/15/%E9%98%85%E8%AF%BB%E4%B9%A6%E6%BA%90%E5%88%B6%E4%BD%9C%E7%AC%94%E8%AE%B0/" rel="next" title="阅读书源制作笔记">
+                  阅读书源制作笔记 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments"><div id="twikoo-comments"></div></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">jitcor</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/jitcor" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":true,"envId":"https://jitcor-github-blog.hf.space","el":"#twikoo-comments"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.twikoo.el)
+    .then(() => NexT.utils.getScript(
+      CONFIG.twikoo.jsUrl || 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
+      { condition: window.twikoo }
+    ))
+    .then(() => {
+      twikoo.init(CONFIG.twikoo);
+    });
+});
+</script>
+<style>
+.post-block, .comments {
+  overflow: visible;
+}
+.tk-owo-emotion {
+  display: inline-block;
+}
+</style>
+
+</body>
+</html>
