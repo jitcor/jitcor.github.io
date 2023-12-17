@@ -27,7 +27,7 @@
 <meta property="og:description" content="常见源类型处理WEBWEB网页型，使用html，js，css组合开发 HTML解析HTML，因为是默认规则，即XPath，所以不用添加什么开头字符 APPAPP应用型，实现方式五花八门，但阅读唯一能处理的，也是大部分APP使用的就是HTTP协议实现的，但HTTP只是通信协议，具体通信数据也是五花八门，阅读能处理的，也是大部分APP使用的就是JSON，当然也不只限APP，WEB里也可能遇到 JSON">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-15T15:48:59.000Z">
-<meta property="article:modified_time" content="2023-12-16T17:26:19.356Z">
+<meta property="article:modified_time" content="2023-12-17T07:16:55.690Z">
 <meta property="article:author" content="jitcor">
 <meta property="article:tag" content="阅读">
 <meta property="article:tag" content="书源">
@@ -96,7 +96,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -160,9 +160,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
@@ -175,6 +180,9 @@
       <span class="links-of-author-item">
         <a href="https://github.com/jitcor" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jitcor" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
   </div>
 
         </div>
@@ -234,7 +242,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-17 01:26:19" itemprop="dateModified" datetime="2023-12-17T01:26:19+08:00">2023-12-17</time>
+      <time title="修改时间：2023-12-17 15:16:55" itemprop="dateModified" datetime="2023-12-17T15:16:55+08:00">2023-12-17</time>
     </span>
 
   
@@ -273,6 +281,8 @@
 <h3 id="APP"><a href="#APP" class="headerlink" title="APP"></a>APP</h3><p>APP应用型，实现方式五花八门，但阅读唯一能处理的，也是大部分APP使用的就是HTTP协议实现的，但HTTP只是通信协议，具体通信数据也是五花八门，阅读能处理的，也是大部分APP使用的就是JSON，当然也不只限APP，WEB里也可能遇到</p>
 <h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>解析JSON数据，使用的<a target="_blank" rel="noopener" href="https://goessner.net/articles/JsonPath/">JSONPath</a>语法，使用<code>$</code>开头，以<code>.</code>分隔层级，类似文件系统里的<code>/</code><br>。在线测试网站：<a target="_blank" rel="noopener" href="https://jsonpath.com/">JSONPath Online Evaluator</a></p>
 <h3 id="REGEX"><a href="#REGEX" class="headerlink" title="REGEX"></a>REGEX</h3><p>也就是正则表达式，这个是通用的，既适用WEB，也适用APP，规则就是<code>##正则##替换内容</code>，若是替换内容为空，则<code>正则</code>后面内容可省略</p>
+<span id="more"></span> 
+
 <h2 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;玄幻修真&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/api/ajax/list,&#123;&#x27;method&#x27;:&#x27;POST&#x27;,&#x27;body&#x27;:&#x27;token=6e3d23fec1cfb91ea31c6f6870b4d093&amp;time=1702660662&amp;sort=1&amp;key=1&amp;order=1&amp;page=&#123;&#123;page&#125;&#125;&#x27;&#125;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;都市言情&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/api/ajax/list,&#123;&#x27;method&#x27;:&#x27;POST&#x27;,&#x27;body&#x27;:&#x27;token=e3a12a6ab5a73dda5ea82745839864a9&amp;time=1702663025&amp;sort=1&amp;key=5&amp;order=1&amp;page=&#123;&#123;page&#125;&#125;&#x27;&#125;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p>Q: 搜索请求使用POST，GB2312编码，并且html内容是动态加载的<br>用规则说话:<code>https://qqq.xxx.com/ss/qq?q=&#123;&#123;key&#125;&#125;,&#123;&#39;method&#39;:&#39;POST&#39;,&#39;charset&#39;:&#39;gb2312&#39;,&#39;webView&#39;:true&#125;</code><br>Q: 任意返回链接规则启用webview<br>A: 后面添加<code>##$##,&#123;&#39;webView&#39;:true&#125;</code><br>Q: 下一页处理<br>Q: 如何修改调试时的默认搜索关键字<br>A: 书源-&gt;基础-&gt;校验文字<br>Q: 书源若访问频繁会封禁IP<br>A: 书源-&gt;基础-&gt;并发率</p>
@@ -291,6 +301,23 @@
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jitcor
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jitcor.github.io/2023/12/15/%E9%98%85%E8%AF%BB%E4%B9%A6%E6%BA%90%E5%88%B6%E4%BD%9C%E7%AC%94%E8%AE%B0/" title="阅读书源制作笔记">https://jitcor.github.io/2023/12/15/阅读书源制作笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
               <a href="/tags/%E9%98%85%E8%AF%BB/" rel="tag"># 阅读</a>
               <a href="/tags/%E4%B9%A6%E6%BA%90/" rel="tag"># 书源</a>
@@ -306,6 +333,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/12/17/%E8%87%AA%E7%94%A8Window%E5%A5%BD%E8%BD%AFTOP3/" rel="next" title="自用Window好软TOP3">
+                  自用Window好软TOP3 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -338,14 +368,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
