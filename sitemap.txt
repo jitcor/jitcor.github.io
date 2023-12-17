@@ -1,3 +1,4 @@
+https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/
 https://jitcor.github.io/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/
 https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/
 https://jitcor.github.io/2023/12/17/%E8%87%AA%E7%94%A8Android%E5%A5%BD%E8%BD%AFTOP3/
@@ -9,7 +10,6 @@ https://jitcor.github.io/archives/index.html
 https://jitcor.github.io/categories/index.html
 https://jitcor.github.io/schedule/index.html
 https://jitcor.github.io/tags/index.html
-https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/
 https://jitcor.github.io/
 https://jitcor.github.io/tags/github/
 https://jitcor.github.io/tags/blog/

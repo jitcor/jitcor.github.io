@@ -106,6 +106,8 @@
 <h2 id="非国行"><a href="#非国行" class="headerlink" title="非国行"></a>非国行</h2><blockquote>
 <p>没啥限制，就是联网不太行，需要加速</p>
 </blockquote>
+<span id="more"></span> 
+
 <h1 id="游戏购买方式"><a href="#游戏购买方式" class="headerlink" title="游戏购买方式"></a>游戏购买方式</h1><h2 id="贝宝"><a href="#贝宝" class="headerlink" title="贝宝"></a>贝宝</h2><blockquote>
 <p>优点：方便，安全<br>缺点：支持地区<br>注意事项：若是遇到最后支付时报错了(比如错误码：2813-9310)，大概率是银行卡的问题，可以尝试更换首选支付的银行卡（实测更换到另一个信用卡解决）</p>
 </blockquote>
@@ -184,6 +186,8 @@
 <p>至于模块重启生效问题，可以等安装完模块，直接强制重启到fastboot，然后再重新刷一次magisk boot补丁再重启即可。</p>
 <p>OTA包需要通过系统更新刷入。</p>
 </blockquote>
+<span id="more"></span> 
+
 <h1 id="LSPosed"><a href="#LSPosed" class="headerlink" title="LSPosed"></a>LSPosed</h1><ul>
 <li>lsposed管理器显示不激活问题</li>
 </ul>
