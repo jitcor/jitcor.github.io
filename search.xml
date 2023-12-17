@@ -90,6 +90,71 @@
       </tags>
   </entry>
   <entry>
+    <title>一加6解BL锁和ROOT</title>
+    <url>/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/</url>
+    <content><![CDATA[<h1 id="解BL锁"><a href="#解BL锁" class="headerlink" title="解BL锁"></a>解BL锁</h1><ul>
+<li>开启oem</li>
+<li>fastboot oem unlock</li>
+</ul>
+<blockquote>
+<p>注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决(PS:<br>更新完别着急重启，先把OTA包备份出来好提取里面的boot.img)(更新:据酷安网友说需要刷persist分区才行，具体待测试)</p>
+</blockquote>
+<h1 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h1><ul>
+<li>下载OTA包<a href="https://www.h2os.com/download.">https://www.h2os.com/download.</a></li>
+<li>解包提取boot.img</li>
+<li>Magisk 对boot.img打补丁</li>
+<li>fastboot boot magisk_patch.img</li>
+<li>后面按提示操作即可</li>
+</ul>
+<blockquote>
+<p>该机型在重启手机后，会恢复boot.img，所以在每次重启之后都要进入fastboot，重新刷一次magisk boot补丁。</p>
+<p>至于模块重启生效问题，可以等安装完模块，直接强制重启到fastboot，然后再重新刷一次magisk boot补丁再重启即可。</p>
+<p>OTA包需要通过系统更新刷入。</p>
+</blockquote>
+<h1 id="LSPosed"><a href="#LSPosed" class="headerlink" title="LSPosed"></a>LSPosed</h1><ul>
+<li>lsposed管理器显示不激活问题</li>
+</ul>
+<blockquote>
+<p>在重启第一次激活模块后，需要再次重启才能在lsposed app里显示激活</p>
+</blockquote>
+<h1 id="解包提取boot-img"><a href="#解包提取boot-img" class="headerlink" title="解包提取boot.img"></a>解包提取boot.img</h1><ul>
+<li>下载解包工具<a href="https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15">https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15</a></li>
+<li>包含两个py文件payload_dumper.py，update_metadata_pb2.py</li>
+<li>或者直接当前目录下载即可</li>
+<li>pip3 install protobuf</li>
+<li>python payload_dumper.py payload.bin (payload.bin从固件包里提取即可)</li>
+</ul>
+<h1 id="OTA-ROM包刷机"><a href="#OTA-ROM包刷机" class="headerlink" title="OTA&#x2F;ROM包刷机"></a>OTA&#x2F;ROM包刷机</h1><ul>
+<li>下载OTA包</li>
+<li>放入手机sdcard根目录</li>
+<li>进入系统更新-&gt;设置-&gt;本地升级-&gt;找到OTA包</li>
+<li>等待更新完成重启即可</li>
+</ul>
+<h1 id="固件救砖"><a href="#固件救砖" class="headerlink" title="固件救砖"></a>固件救砖</h1><blockquote>
+<p>一次刷boot.img不小心执行了错误的命令:<code>fastboot flash boot magisk_patch.img</code>(正确的是<code>fastboot boot magisk_patch.img</code>)<br>，导致变砖，当然还能通过音量+和电源键进入fastboot模式刷固件也可以解决，不过固件包没找到，需要重新下载，那多麻烦，又发现固件救砖包倒还在，那就试下这个9008救砖吧</p>
+</blockquote>
+<ul>
+<li>禁用驱动签名检查</li>
+<li>装9008驱动</li>
+<li>关机</li>
+<li>按住音量上键</li>
+<li>点击start</li>
+<li>连接电脑</li>
+<li>等待自动识别，并刷入固件</li>
+<li>完成图</li>
+</ul>
+<img src="/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/147733462-207872e5-21f5-4df6-92c7-320ae7c5ad16.png" class="" title="image">
+
+<h1 id="全部资料"><a href="#全部资料" class="headerlink" title="全部资料"></a>全部资料</h1><p><a href="https://cloud.189.cn/t/jAJJBjbM7f6z">https://cloud.189.cn/t/jAJJBjbM7f6z</a> (访问码:5l7k)</p>
+]]></content>
+      <tags>
+        <tag>BL锁</tag>
+        <tag>Magisk</tag>
+        <tag>LSPosed</tag>
+        <tag>oneplus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自用Android好软TOP3</title>
     <url>/2023/12/17/%E8%87%AA%E7%94%A8Android%E5%A5%BD%E8%BD%AFTOP3/</url>
     <content><![CDATA[<h2 id="小说软件"><a href="#小说软件" class="headerlink" title="小说软件"></a>小说软件</h2><ul>

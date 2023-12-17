@@ -65,6 +65,15 @@
   </url>
   
   <url>
+    <loc>https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jitcor.github.io/2023/12/17/%E8%87%AA%E7%94%A8Android%E5%A5%BD%E8%BD%AFTOP3/</loc>
     
     <lastmod>2023-12-17</lastmod>
@@ -116,6 +125,34 @@
   
   <url>
     <loc>https://jitcor.github.io/tags/hexo/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/BL%E9%94%81/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/Magisk/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/LSPosed/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/oneplus/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
