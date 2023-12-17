@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"jitcor.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jitcor.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"right","display":"remove","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="基本环境 Github博客主页逐鹿  博客主题anzhiyu  hexo 7.0.0  nodejs 16.17.1  webstorm 2023.2  vscode 1.85.1  actions-gh-pages v3  Window 10   具体搭建过程大部分参考的这一教程：GitHub Pages + Hexo搭建个人博客网站，史上最全教程，唯一改动的就是主题换成了安知鱼，难点主要是no">
 <meta property="og:type" content="article">
@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png">
 <meta property="og:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png">
 <meta property="article:published_time" content="2023-12-14T09:55:31.000Z">
-<meta property="article:modified_time" content="2023-12-17T08:09:19.712Z">
+<meta property="article:modified_time" content="2023-12-17T08:50:01.581Z">
 <meta property="article:author" content="jitcor">
 <meta property="article:tag" content="github">
 <meta property="article:tag" content="blog">
@@ -133,69 +133,6 @@
   </div>
 
 </header>
-        
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">基本环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">具体搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">安知鱼主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT%E4%B8%BB%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HEXO"><span class="nav-number">2.3.</span> <span class="nav-text">HEXO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Twikoo"><span class="nav-number">2.4.</span> <span class="nav-text">Twikoo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87"><span class="nav-number">2.5.</span> <span class="nav-text">图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github-pages-%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">github pages 安全机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%AB%E5%9D%91"><span class="nav-number">4.</span> <span class="nav-text">填坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86"><span class="nav-number">5.</span> <span class="nav-text">博客加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-blog-encrypt"><span class="nav-number">5.1.</span> <span class="nav-text">hexo-blog-encrypt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99"><span class="nav-number">6.</span> <span class="nav-text">博客编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VSCode"><span class="nav-number">6.1.</span> <span class="nav-text">VSCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebStorm"><span class="nav-number">6.2.</span> <span class="nav-text">WebStorm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typecho"><span class="nav-number">6.3.</span> <span class="nav-text">Typecho</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%88%9B%E4%BF%9D%E6%8A%A4"><span class="nav-number">7.</span> <span class="nav-text">原创保护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">备用主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">jitcor</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">7</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/jitcor" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jitcor" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
-  <div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
-  </div>
-
-        </div>
-      </div>
-    </div>
-
-    
-  </aside>
-
-
     </div>
 
     <div class="main-inner post posts-expand">
@@ -245,7 +182,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-17 16:09:19" itemprop="dateModified" datetime="2023-12-17T16:09:19+08:00">2023-12-17</time>
+      <time title="修改时间：2023-12-17 16:50:01" itemprop="dateModified" datetime="2023-12-17T16:50:01+08:00">2023-12-17</time>
     </span>
 
   
@@ -465,12 +402,6 @@
   </footer>
 
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
   <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
