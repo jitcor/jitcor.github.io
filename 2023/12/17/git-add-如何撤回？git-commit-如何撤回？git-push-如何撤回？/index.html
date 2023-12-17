@@ -27,7 +27,7 @@
 <meta property="og:description" content="修改commit（撤回git add 和git commit） 这部分仅适合没有git push 提交的，若是已经提交的，则仅能使用上面的命令才行  修改最新commit123git reset HEAD~1 # 相当于git reset --mixed HEAD~1 会撤销add和commit# 正常修改代码# 再次add和commit即可  修改上一次commit123git reset HE">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-17T16:29:25.000Z">
-<meta property="article:modified_time" content="2023-12-17T16:37:51.839Z">
+<meta property="article:modified_time" content="2023-12-17T16:39:58.318Z">
 <meta property="article:author" content="jitcor">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -171,7 +171,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-12-18 00:29:25 / 修改时间：00:37:51" itemprop="dateCreated datePublished" datetime="2023-12-18T00:29:25+08:00">2023-12-18</time>
+      <time title="创建时间：2023-12-18 00:29:25 / 修改时间：00:39:58" itemprop="dateCreated datePublished" datetime="2023-12-18T00:29:25+08:00">2023-12-18</time>
     </span>
 
   
@@ -188,7 +188,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>628</span>
+      <span>629</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -211,6 +211,8 @@
 <h3 id="修改最新commit"><a href="#修改最新commit" class="headerlink" title="修改最新commit"></a>修改最新commit</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD~1 # 相当于git reset --mixed HEAD~1 会撤销add和commit</span><br><span class="line"># 正常修改代码</span><br><span class="line"># 再次add和commit即可</span><br></pre></td></tr></table></figure>
 
 <h3 id="修改上一次commit"><a href="#修改上一次commit" class="headerlink" title="修改上一次commit"></a>修改上一次commit</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD~2</span><br><span class="line"># 正常修改代码</span><br><span class="line"># 再次add和commit即可</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span> 
 
 <h2 id="完全撤回commit（就是撤回git-push-，直接在远程和本地的git-log里看不到这条commit记录）"><a href="#完全撤回commit（就是撤回git-push-，直接在远程和本地的git-log里看不到这条commit记录）" class="headerlink" title="完全撤回commit（就是撤回git push ，直接在远程和本地的git log里看不到这条commit记录）"></a>完全撤回commit（就是撤回git push ，直接在远程和本地的git log里看不到这条commit记录）</h2><blockquote>
 <p>注：带–hard的会删除本地更改的代码</p>

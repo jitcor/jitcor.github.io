@@ -174,6 +174,8 @@
 
 <h3 id="修改上一次commit"><a href="#修改上一次commit" class="headerlink" title="修改上一次commit"></a>修改上一次commit</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git reset HEAD~2</span><br><span class="line"># 正常修改代码</span><br><span class="line"># 再次add和commit即可</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span> 
+
 <h2 id="完全撤回commit（就是撤回git-push-，直接在远程和本地的git-log里看不到这条commit记录）"><a href="#完全撤回commit（就是撤回git-push-，直接在远程和本地的git-log里看不到这条commit记录）" class="headerlink" title="完全撤回commit（就是撤回git push ，直接在远程和本地的git log里看不到这条commit记录）"></a>完全撤回commit（就是撤回git push ，直接在远程和本地的git log里看不到这条commit记录）</h2><blockquote>
 <p>注：带–hard的会删除本地更改的代码</p>
 </blockquote>
