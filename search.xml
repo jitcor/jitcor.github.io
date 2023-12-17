@@ -90,6 +90,79 @@
       </tags>
   </entry>
   <entry>
+    <title>Switch新人一枚入手使用笔记</title>
+    <url>/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h1><ul>
+<li>账户：<a href="https://accounts.nintendo.com/">https://accounts.nintendo.com/</a></li>
+<li>Nintendo Switch Online 会员状态：<a href="https://ec.nintendo.com/my/membership">https://ec.nintendo.com/my/membership</a></li>
+<li>Nintendo Switch Online 会员自动续订查询：<a href="https://ec.nintendo.com/my/#/rights">https://ec.nintendo.com/my/#/rights</a></li>
+</ul>
+<blockquote>
+<p>(不过这里好像看不到，反而上面会员状态里看到了，可能是试用会员的原因)</p>
+</blockquote>
+<h1 id="Switch主机"><a href="#Switch主机" class="headerlink" title="Switch主机"></a>Switch主机</h1><h2 id="国行"><a href="#国行" class="headerlink" title="国行"></a>国行</h2><blockquote>
+<p>目前限制太多，不建议购买<br>听说国行的实体卡无法在非国行的机子上使用，所以不仅锁区，还锁卡</p>
+</blockquote>
+<h2 id="非国行"><a href="#非国行" class="headerlink" title="非国行"></a>非国行</h2><blockquote>
+<p>没啥限制，就是联网不太行，需要加速</p>
+</blockquote>
+<h1 id="游戏购买方式"><a href="#游戏购买方式" class="headerlink" title="游戏购买方式"></a>游戏购买方式</h1><h2 id="贝宝"><a href="#贝宝" class="headerlink" title="贝宝"></a>贝宝</h2><blockquote>
+<p>优点：方便，安全<br>缺点：支持地区<br>注意事项：若是遇到最后支付时报错了(比如错误码：2813-9310)，大概率是银行卡的问题，可以尝试更换首选支付的银行卡（实测更换到另一个信用卡解决）</p>
+</blockquote>
+<h2 id="信用卡"><a href="#信用卡" class="headerlink" title="信用卡"></a>信用卡</h2><blockquote>
+<p>优点：支持地区多（相对贝宝来说）<br>缺点：有点不安全（自认为，毕竟信用卡不需要密码）</p>
+</blockquote>
+<h2 id="点卡"><a href="#点卡" class="headerlink" title="点卡"></a>点卡</h2><blockquote>
+<p>优点：支持全部地区（大概）<br>缺点：贵点，还有余额问题导致无法换区（日本除外）<br>注：可以在余额很少时，选择放弃余额，来强制换区，这样就不用为了清余额，而投入更多的钱 <br>注：点卡不会有假的</p>
+</blockquote>
+<ul>
+<li><del>jump</del>（以前可以，现在开始割韭菜，准备跑路了）</li>
+<li>京东</li>
+<li>淘宝</li>
+</ul>
+<h1 id="游戏降价"><a href="#游戏降价" class="headerlink" title="游戏降价"></a>游戏降价</h1><ul>
+<li>微信小程序：主掌中宝Switch游戏查询</li>
+</ul>
+<blockquote>
+<p>可以查看各区实时价格，降价信息，历史价格更人性化，评论人数也更多，排序筛选也更人性化，最主要是可以监控任意游戏降价通知</p>
+</blockquote>
+<ul>
+<li>微信小程序：任饭团Switch</li>
+</ul>
+<blockquote>
+<p>可以查看各区实时价格，降价信息，历史价格</p>
+</blockquote>
+<h2 id="降价监控脚本开发"><a href="#降价监控脚本开发" class="headerlink" title="降价监控脚本开发"></a><del>降价监控脚本开发</del></h2><p>鸽了，已找到有这功能的小程序了</p>
+<h1 id="多账户"><a href="#多账户" class="headerlink" title="多账户"></a>多账户</h1><ul>
+<li>优点：可以一个游戏，一个账户，方便再次出售</li>
+<li>优点：一个主账号用来玩游戏，其他账号设置成固定且各不相同的国家分区用来购买游戏，就不用再频繁切换分区，不用再考虑清掉余额问题了</li>
+<li>缺点：账户一多，就有管理问题，不过对于它的优点来说，这都是小问题</li>
+</ul>
+<h1 id="存储卡"><a href="#存储卡" class="headerlink" title="存储卡"></a>存储卡</h1><blockquote>
+<p>官方说明<a href="https://www.nintendo.com.hk/switch/support/data_management/microsdcard/">https://www.nintendo.com.hk/switch/support/data_management/microsdcard/</a></p>
+</blockquote>
+<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><blockquote>
+<p>参考<a href="https://www.zhihu.com/question/397495712/answer/1350785593">https://www.zhihu.com/question/397495712/answer/1350785593</a></p>
+</blockquote>
+<ul>
+<li>仅支持TF卡（又名microSD）</li>
+<li>仅支持UHS-I（也就是存储卡上显示有且仅有个“I”字母）</li>
+<li>最低读取速度60MB&#x2F;s，最高则越高越好</li>
+<li>U属性越高越好</li>
+<li>C属性越高越好</li>
+<li>V属性越高越好</li>
+<li>A属性越高越好</li>
+</ul>
+<blockquote>
+<p>目前我买的是这款<a href="https://item.jd.com/6201910.html#crumb-wrap">https://item.jd.com/6201910.html#crumb-wrap</a></p>
+</blockquote>
+<h1 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h1><p>参考<a href="https://github.com/Humenger/switch">https://github.com/Humenger/switch</a></p>
+]]></content>
+      <tags>
+        <tag>Switch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一加6解BL锁和ROOT</title>
     <url>/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/</url>
     <content><![CDATA[<h1 id="解BL锁"><a href="#解BL锁" class="headerlink" title="解BL锁"></a>解BL锁</h1><ul>

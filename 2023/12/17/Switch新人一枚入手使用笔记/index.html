@@ -19,33 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"jitcor.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基本环境 Github博客主页逐鹿  博客主题anzhiyu  hexo 7.0.0  nodejs 16.17.1  webstorm 2023.2  vscode 1.85.1  actions-gh-pages v3  Window 10   具体搭建过程大部分参考的这一教程：GitHub Pages + Hexo搭建个人博客网站，史上最全教程，唯一改动的就是主题换成了安知鱼，难点主要是no">
+    <meta name="description" content="网站 账户：https:&#x2F;&#x2F;accounts.nintendo.com&#x2F; Nintendo Switch Online 会员状态：https:&#x2F;&#x2F;ec.nintendo.com&#x2F;my&#x2F;membership Nintendo Switch Online 会员自动续订查询：https:&#x2F;&#x2F;ec.nintendo.com&#x2F;my&#x2F;#&#x2F;rights   (不过这里好像看不到，反而上面会员状态里看到了，可能是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github博客搭建笔记">
-<meta property="og:url" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="Switch新人一枚入手使用笔记">
+<meta property="og:url" content="https://jitcor.github.io/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="逐鹿">
-<meta property="og:description" content="基本环境 Github博客主页逐鹿  博客主题anzhiyu  hexo 7.0.0  nodejs 16.17.1  webstorm 2023.2  vscode 1.85.1  actions-gh-pages v3  Window 10   具体搭建过程大部分参考的这一教程：GitHub Pages + Hexo搭建个人博客网站，史上最全教程，唯一改动的就是主题换成了安知鱼，难点主要是no">
+<meta property="og:description" content="网站 账户：https:&#x2F;&#x2F;accounts.nintendo.com&#x2F; Nintendo Switch Online 会员状态：https:&#x2F;&#x2F;ec.nintendo.com&#x2F;my&#x2F;membership Nintendo Switch Online 会员自动续订查询：https:&#x2F;&#x2F;ec.nintendo.com&#x2F;my&#x2F;#&#x2F;rights   (不过这里好像看不到，反而上面会员状态里看到了，可能是">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png">
-<meta property="og:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png">
-<meta property="article:published_time" content="2023-12-14T09:55:31.000Z">
-<meta property="article:modified_time" content="2023-12-17T08:08:06.165Z">
+<meta property="article:published_time" content="2023-12-17T08:06:30.000Z">
+<meta property="article:modified_time" content="2023-12-17T08:08:06.169Z">
 <meta property="article:author" content="jitcor">
-<meta property="article:tag" content="github">
-<meta property="article:tag" content="blog">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="Switch">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png">
 
 
-<link rel="canonical" href="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="https://jitcor.github.io/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/","path":"2023/12/14/Github博客搭建笔记/","title":"Github博客搭建笔记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jitcor.github.io/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/","path":"2023/12/17/Switch新人一枚入手使用笔记/","title":"Switch新人一枚入手使用笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Github博客搭建笔记 | 逐鹿</title>
+<title>Switch新人一枚入手使用笔记 | 逐鹿</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5CSTBHGJ8"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-C5CSTBHGJ8","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -150,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">基本环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">具体搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">安知鱼主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT%E4%B8%BB%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HEXO"><span class="nav-number">2.3.</span> <span class="nav-text">HEXO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Twikoo"><span class="nav-number">2.4.</span> <span class="nav-text">Twikoo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87"><span class="nav-number">2.5.</span> <span class="nav-text">图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github-pages-%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">github pages 安全机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%AB%E5%9D%91"><span class="nav-number">4.</span> <span class="nav-text">填坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86"><span class="nav-number">5.</span> <span class="nav-text">博客加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-blog-encrypt"><span class="nav-number">5.1.</span> <span class="nav-text">hexo-blog-encrypt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99"><span class="nav-number">6.</span> <span class="nav-text">博客编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VSCode"><span class="nav-number">6.1.</span> <span class="nav-text">VSCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebStorm"><span class="nav-number">6.2.</span> <span class="nav-text">WebStorm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typecho"><span class="nav-number">6.3.</span> <span class="nav-text">Typecho</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%88%9B%E4%BF%9D%E6%8A%A4"><span class="nav-number">7.</span> <span class="nav-text">原创保护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">备用主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%AB%99"><span class="nav-number">1.</span> <span class="nav-text">网站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Switch%E4%B8%BB%E6%9C%BA"><span class="nav-number">2.</span> <span class="nav-text">Switch主机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E8%A1%8C"><span class="nav-number">2.1.</span> <span class="nav-text">国行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E5%9B%BD%E8%A1%8C"><span class="nav-number">2.2.</span> <span class="nav-text">非国行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">游戏购买方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%9D%E5%AE%9D"><span class="nav-number">3.1.</span> <span class="nav-text">贝宝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E7%94%A8%E5%8D%A1"><span class="nav-number">3.2.</span> <span class="nav-text">信用卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%8D%A1"><span class="nav-number">3.3.</span> <span class="nav-text">点卡</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E9%99%8D%E4%BB%B7"><span class="nav-number">4.</span> <span class="nav-text">游戏降价</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%8D%E4%BB%B7%E7%9B%91%E6%8E%A7%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91"><span class="nav-number">4.1.</span> <span class="nav-text">降价监控脚本开发</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%B4%A6%E6%88%B7"><span class="nav-number">5.</span> <span class="nav-text">多账户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%8D%A1"><span class="nav-number">6.</span> <span class="nav-text">存储卡</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0"><span class="nav-number">6.1.</span> <span class="nav-text">购买</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3"><span class="nav-number">7.</span> <span class="nav-text">破解</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -209,7 +204,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -222,12 +217,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Github博客搭建笔记 | 逐鹿">
+      <meta itemprop="name" content="Switch新人一枚入手使用笔记 | 逐鹿">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Github博客搭建笔记<a href="https://github.com/jitcor/jitcor-blog/tree/main/source/_posts/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Switch新人一枚入手使用笔记<a href="https://github.com/jitcor/jitcor-blog/tree/main/source/_posts/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -237,15 +232,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-12-14 17:55:31" itemprop="dateCreated datePublished" datetime="2023-12-14T17:55:31+08:00">2023-12-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-17 16:08:06" itemprop="dateModified" datetime="2023-12-17T16:08:06+08:00">2023-12-17</time>
+      <time title="创建时间：2023-12-17 16:06:30 / 修改时间：16:08:06" itemprop="dateCreated datePublished" datetime="2023-12-17T16:06:30+08:00">2023-12-17</time>
     </span>
 
   
@@ -262,14 +251,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>792</span>
+      <span>687</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -279,85 +268,71 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><ul>
-<li><p>Github博客主页<br><a href="https://jitcor.github.io/">逐鹿</a></p>
-</li>
-<li><p>博客主题<br><a target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">anzhiyu</a></p>
-</li>
-<li><p>hexo 7.0.0</p>
-</li>
-<li><p>nodejs 16.17.1</p>
-</li>
-<li><p>webstorm 2023.2</p>
-</li>
-<li><p>vscode 1.85.1</p>
-</li>
-<li><p>actions-gh-pages v3</p>
-</li>
-<li><p>Window 10</p>
-</li>
+    <div class="post-body" itemprop="articleBody"><h1 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h1><ul>
+<li>账户：<a target="_blank" rel="noopener" href="https://accounts.nintendo.com/">https://accounts.nintendo.com/</a></li>
+<li>Nintendo Switch Online 会员状态：<a target="_blank" rel="noopener" href="https://ec.nintendo.com/my/membership">https://ec.nintendo.com/my/membership</a></li>
+<li>Nintendo Switch Online 会员自动续订查询：<a target="_blank" rel="noopener" href="https://ec.nintendo.com/my/#/rights">https://ec.nintendo.com/my/#/rights</a></li>
 </ul>
-<h2 id="具体搭建过程"><a href="#具体搭建过程" class="headerlink" title="具体搭建过程"></a>具体搭建过程</h2><p>大部分参考的这一教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo搭建个人博客网站，史上最全教程</a><br>，唯一改动的就是主题换成了安知鱼，难点主要是nodejs使用,hexo使用,github一键部署</p>
-<h3 id="安知鱼主题"><a href="#安知鱼主题" class="headerlink" title="安知鱼主题"></a>安知鱼主题</h3><p>文档：<a target="_blank" rel="noopener" href="https://docs.anheyu.com/intro.html">https://docs.anheyu.com/intro.html</a></p>
 <blockquote>
+<p>(不过这里好像看不到，反而上面会员状态里看到了，可能是试用会员的原因)</p>
 </blockquote>
-<p>配置到最后发现，还是NexT主题符合我的目标，简单快速易上手，安知鱼加载缓慢，编译缓慢，界面元素太多，要配置的东西也太多，逐渐偏离我的初心，我的初心不是搭建博客，而是在github做笔记的同时随便搞下博客，方便后续阅读，NexT简单配置下就行了，啥也不用管，配置完跟之前在github写md一样，只不过现在写完会自动转为博客，但安知鱼纯粹是为了写博客了。所以明白了<br>这点后，果断转了NexT。</p>
-<h3 id="NexT主题"><a href="#NexT主题" class="headerlink" title="NexT主题"></a>NexT主题</h3><p>主题进阶设置：<a target="_blank" rel="noopener" href="https://www.qtmuniao.com/2019/10/16/hexo-theme-landscaping/">https://www.qtmuniao.com/2019/10/16/hexo-theme-landscaping/</a></p>
-<span id="more"></span> 
-
-<h3 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h3><p>hexo的安装没啥难的，正常执行命令安装就行<code>npm install -g hexo-cli</code>，这里加<code>-g</code>会将hexo安装到nodejs全局模块里，<br>因此需要把全局模块的路径加到系统环境路径里，否则会找不到hexo命令，我的hexo是安装到如下位置(<br>这个位置不是固定的，可以自己通过nodejs命令指定)  </p>
-<img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/node_module_hexo.png" class="" title="image">  
-<p>这里hexo.ps1被重命名了，我的Window10系统会优先识别该文件，但Window10系统里该格式默认是不支持执行的，所以只能重命名，让其识别到hexo.cmd命令</p>
-<h3 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h3><p>使用直接看<a target="_blank" rel="noopener" href="https://twikoo.js.org/quick-start.html">官网</a>就行，教程很详细<br>其中最推荐的是Netlify和Hugging Face 部署，不过实际测试，Netlify有点坑，注册过不去，检测太严格，还是Hugging<br>Face比较好用，至于MongoDB的步骤没啥问题<br>然后将最后生成的<a target="_blank" rel="noopener" href="https://xxxx.hf.space复制到配置里的envid即可/">https://xxxx.hf.space复制到配置里的envId即可</a></p>
-<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><h2 id="github-pages-安全机制"><a href="#github-pages-安全机制" class="headerlink" title="github pages 安全机制"></a>github pages 安全机制</h2><img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png" class="" title="image">
-
-
-<h2 id="填坑"><a href="#填坑" class="headerlink" title="填坑"></a>填坑</h2><ul>
-<li><code>fatal: could not read Username for &#39;https://github.com&#39;: No such device or address</code></li>
-</ul>
-<blockquote>
-<p>需要输入密码，但actions不显示界面，所以报没有设备，解决办法就是采用SSH机制，切换到peaceiris&#x2F;actions-gh-pages部署方式</p>
+<h1 id="Switch主机"><a href="#Switch主机" class="headerlink" title="Switch主机"></a>Switch主机</h1><h2 id="国行"><a href="#国行" class="headerlink" title="国行"></a>国行</h2><blockquote>
+<p>目前限制太多，不建议购买<br>听说国行的实体卡无法在非国行的机子上使用，所以不仅锁区，还锁卡</p>
+</blockquote>
+<h2 id="非国行"><a href="#非国行" class="headerlink" title="非国行"></a>非国行</h2><blockquote>
+<p>没啥限制，就是联网不太行，需要加速</p>
+</blockquote>
+<h1 id="游戏购买方式"><a href="#游戏购买方式" class="headerlink" title="游戏购买方式"></a>游戏购买方式</h1><h2 id="贝宝"><a href="#贝宝" class="headerlink" title="贝宝"></a>贝宝</h2><blockquote>
+<p>优点：方便，安全<br>缺点：支持地区<br>注意事项：若是遇到最后支付时报错了(比如错误码：2813-9310)，大概率是银行卡的问题，可以尝试更换首选支付的银行卡（实测更换到另一个信用卡解决）</p>
+</blockquote>
+<h2 id="信用卡"><a href="#信用卡" class="headerlink" title="信用卡"></a>信用卡</h2><blockquote>
+<p>优点：支持地区多（相对贝宝来说）<br>缺点：有点不安全（自认为，毕竟信用卡不需要密码）</p>
+</blockquote>
+<h2 id="点卡"><a href="#点卡" class="headerlink" title="点卡"></a>点卡</h2><blockquote>
+<p>优点：支持全部地区（大概）<br>缺点：贵点，还有余额问题导致无法换区（日本除外）<br>注：可以在余额很少时，选择放弃余额，来强制换区，这样就不用为了清余额，而投入更多的钱 <br>注：点卡不会有假的</p>
 </blockquote>
 <ul>
-<li><code>Cannot read properties of null (reading &#39;matches&#39;)</code></li>
+<li><del>jump</del>（以前可以，现在开始割韭菜，准备跑路了）</li>
+<li>京东</li>
+<li>淘宝</li>
+</ul>
+<h1 id="游戏降价"><a href="#游戏降价" class="headerlink" title="游戏降价"></a>游戏降价</h1><ul>
+<li>微信小程序：主掌中宝Switch游戏查询</li>
 </ul>
 <blockquote>
-<p>看参考</p>
+<p>可以查看各区实时价格，降价信息，历史价格更人性化，评论人数也更多，排序筛选也更人性化，最主要是可以监控任意游戏降价通知</p>
 </blockquote>
 <ul>
-<li><p><code>Cannot find module &#39;hexo-util&#39;</code></p>
+<li>微信小程序：任饭团Switch</li>
+</ul>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/issues/1480">https://github.com/iissnan/hexo-theme-next/issues/1480</a></p>
+<p>可以查看各区实时价格，降价信息，历史价格</p>
 </blockquote>
-</li>
-<li><p><code>FATAL can not read a block mapping entry解决办法</code></p>
+<h2 id="降价监控脚本开发"><a href="#降价监控脚本开发" class="headerlink" title="降价监控脚本开发"></a><del>降价监控脚本开发</del></h2><p>鸽了，已找到有这功能的小程序了</p>
+<h1 id="多账户"><a href="#多账户" class="headerlink" title="多账户"></a>多账户</h1><ul>
+<li>优点：可以一个游戏，一个账户，方便再次出售</li>
+<li>优点：一个主账号用来玩游戏，其他账号设置成固定且各不相同的国家分区用来购买游戏，就不用再频繁切换分区，不用再考虑清掉余额问题了</li>
+<li>缺点：账户一多，就有管理问题，不过对于它的优点来说，这都是小问题</li>
+</ul>
+<h1 id="存储卡"><a href="#存储卡" class="headerlink" title="存储卡"></a>存储卡</h1><blockquote>
+<p>官方说明<a target="_blank" rel="noopener" href="https://www.nintendo.com.hk/switch/support/data_management/microsdcard/">https://www.nintendo.com.hk/switch/support/data_management/microsdcard/</a></p>
+</blockquote>
+<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><blockquote>
+<p>参考<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/397495712/answer/1350785593">https://www.zhihu.com/question/397495712/answer/1350785593</a></p>
+</blockquote>
+<ul>
+<li>仅支持TF卡（又名microSD）</li>
+<li>仅支持UHS-I（也就是存储卡上显示有且仅有个“I”字母）</li>
+<li>最低读取速度60MB&#x2F;s，最高则越高越好</li>
+<li>U属性越高越好</li>
+<li>C属性越高越好</li>
+<li>V属性越高越好</li>
+<li>A属性越高越好</li>
+</ul>
 <blockquote>
-<p>看参考</p>
+<p>目前我买的是这款<a target="_blank" rel="noopener" href="https://item.jd.com/6201910.html#crumb-wrap">https://item.jd.com/6201910.html#crumb-wrap</a></p>
 </blockquote>
-</li>
-</ul>
-<h2 id="博客加密"><a href="#博客加密" class="headerlink" title="博客加密"></a>博客加密</h2><h3 id="hexo-blog-encrypt"><a href="#hexo-blog-encrypt" class="headerlink" title="hexo-blog-encrypt"></a>hexo-blog-encrypt</h3><h2 id="博客编写"><a href="#博客编写" class="headerlink" title="博客编写"></a>博客编写</h2><h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><h3 id="WebStorm"><a href="#WebStorm" class="headerlink" title="WebStorm"></a>WebStorm</h3><h3 id="Typecho"><a href="#Typecho" class="headerlink" title="Typecho"></a>Typecho</h3><h2 id="原创保护"><a href="#原创保护" class="headerlink" title="原创保护"></a>原创保护</h2><p><a target="_blank" rel="noopener" href="https://geektutu.com/post/blog-experience-4.html">https://geektutu.com/post/blog-experience-4.html</a></p>
-<h2 id="备用主题"><a href="#备用主题" class="headerlink" title="备用主题"></a>备用主题</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">安知鱼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/auroral-ui/hexo-theme-aurora">aurora</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">bamboo</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/niemingzhao/niemingzhao.github.io/tree/theme">MDUI</a>‘</li>
-<li><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a></li>
-</ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo搭建个人博客网站，史上最全教程</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/all-smile/p/16608503.html">Hexo+GitHub搭建个人博客，实现云端编辑、一键发文</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">peaceiris&#x2F;actions-gh-pages</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21808961/article/details/84476504">hexo d命令报错 ERROR Deployer not found: git</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/p1767158841/article/details/127685756">当遇到：npm ERR Cannot read properties of null (reading ‘matches‘) 问题时</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44318830/article/details/104884936">Hexo启动页面显示extends includes&#x2F;layout.pug block content include includes&#x2F;recent-posts.pug include</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/aa936a8369fb">使用hexo theme Butterfly 报错</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.itfanr.cc/2021/04/16/hexo-blog-article-encryption/">Hexo博客文章加密</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/feinifi/article/details/64204687">FATAL can not read a block mapping entry解决办法</a></li>
-<li><a target="_blank" rel="noopener" href="https://xydche.github.io/posts/ef3aa99.html">hexo部署后是空白页</a></li>
-<li><a target="_blank" rel="noopener" href="https://arcsin2.cloud/2023/02/23/Hexo-%E5%8D%9A%E5%AE%A2%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Hexo 博客无法显示图片解决方法</a></li>
-</ul>
+<h1 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h1><p>参考<a target="_blank" rel="noopener" href="https://github.com/Humenger/switch">https://github.com/Humenger/switch</a></p>
 
     </div>
 
@@ -375,7 +350,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" title="Github博客搭建笔记">https://jitcor.github.io/2023/12/14/Github博客搭建笔记/</a>
+      <a href="https://jitcor.github.io/2023/12/17/Switch%E6%96%B0%E4%BA%BA%E4%B8%80%E6%9E%9A%E5%85%A5%E6%89%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" title="Switch新人一枚入手使用笔记">https://jitcor.github.io/2023/12/17/Switch新人一枚入手使用笔记/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -384,20 +359,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/github/" rel="tag"># github</a>
-              <a href="/tags/blog/" rel="tag"># blog</a>
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/Switch/" rel="tag"># Switch</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/" rel="prev" title="一加6解BL锁和ROOT">
+                  <i class="fa fa-angle-left"></i> 一加6解BL锁和ROOT
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/12/15/%E9%98%85%E8%AF%BB%E4%B9%A6%E6%BA%90%E5%88%B6%E4%BD%9C%E7%AC%94%E8%AE%B0/" rel="next" title="阅读书源制作笔记">
-                  阅读书源制作笔记 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
