@@ -27,7 +27,7 @@
 <meta property="og:description" content="常见源类型处理WEBWEB网页型，使用html，js，css组合开发 HTML解析HTML，因为是默认规则，即XPath，所以不用添加什么开头字符 APPAPP应用型，实现方式五花八门，但阅读唯一能处理的，也是大部分APP使用的就是HTTP协议实现的，但HTTP只是通信协议，具体通信数据也是五花八门，阅读能处理的，也是大部分APP使用的就是JSON，当然也不只限APP，WEB里也可能遇到 JSON">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-15T15:48:59.000Z">
-<meta property="article:modified_time" content="2023-12-17T08:50:01.585Z">
+<meta property="article:modified_time" content="2023-12-17T15:57:26.436Z">
 <meta property="article:author" content="jitcor">
 <meta property="article:tag" content="阅读">
 <meta property="article:tag" content="书源">
@@ -179,7 +179,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-17 16:50:01" itemprop="dateModified" datetime="2023-12-17T16:50:01+08:00">2023-12-17</time>
+      <time title="修改时间：2023-12-17 23:57:26" itemprop="dateModified" datetime="2023-12-17T23:57:26+08:00">2023-12-17</time>
     </span>
 
   
@@ -222,7 +222,9 @@
 
 <h2 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;玄幻修真&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/api/ajax/list,&#123;&#x27;method&#x27;:&#x27;POST&#x27;,&#x27;body&#x27;:&#x27;token=6e3d23fec1cfb91ea31c6f6870b4d093&amp;time=1702660662&amp;sort=1&amp;key=1&amp;order=1&amp;page=&#123;&#123;page&#125;&#125;&#x27;&#125;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;都市言情&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/api/ajax/list,&#123;&#x27;method&#x27;:&#x27;POST&#x27;,&#x27;body&#x27;:&#x27;token=e3a12a6ab5a73dda5ea82745839864a9&amp;time=1702663025&amp;sort=1&amp;key=5&amp;order=1&amp;page=&#123;&#123;page&#125;&#125;&#x27;&#125;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p>Q: 搜索请求使用POST，GB2312编码，并且html内容是动态加载的<br>用规则说话:<code>https://qqq.xxx.com/ss/qq?q=&#123;&#123;key&#125;&#125;,&#123;&#39;method&#39;:&#39;POST&#39;,&#39;charset&#39;:&#39;gb2312&#39;,&#39;webView&#39;:true&#125;</code><br>Q: 任意返回链接规则启用webview<br>A: 后面添加<code>##$##,&#123;&#39;webView&#39;:true&#125;</code><br>Q: 下一页处理<br>Q: 如何修改调试时的默认搜索关键字<br>A: 书源-&gt;基础-&gt;校验文字<br>Q: 书源若访问频繁会封禁IP<br>A: 书源-&gt;基础-&gt;并发率</p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p>Q: 搜索请求使用POST，GB2312编码，并且html内容是动态加载的<br>用规则说话:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://qqq.xxx.com/ss/qq?q=&#123;&#123;key&#125;&#125;,&#123;&#x27;method&#x27;:&#x27;POST&#x27;,&#x27;charset&#x27;:&#x27;gb2312&#x27;,&#x27;webView&#x27;:true&#125;</span><br></pre></td></tr></table></figure>
+<p>Q: 任意返回链接规则启用webview<br>A: 后面添加<code>##$##,&#123;&#39;webView&#39;:true&#125;</code><br>Q: 下一页处理<br>Q: 如何修改调试时的默认搜索关键字<br>A: 书源-&gt;基础-&gt;校验文字<br>Q: 书源若访问频繁会封禁IP<br>A: 书源-&gt;基础-&gt;并发率</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://celeter.github.io/">官方文档</a></li>
 </ul>
