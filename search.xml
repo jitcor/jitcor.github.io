@@ -57,7 +57,7 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ yum -y install nginx-mod-stream</span><br><span class="line">$ vim /etc/nginx/nginx.conf      // 载入模块</span><br><span class="line">load_module /usr/lib64/nginx/modules/ngx_stream_module.so;</span><br><span class="line">worker_processes 4;</span><br><span class="line">worker_rlimit_nofile 40000;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ systemctl start nginx</span><br></pre></td></tr></table></figure>
 
 <p>最终Nginx正常运行，不再报错，TCP端口正常转发。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>GPT很好用，但最多能解决80%的问题，剩下20%还需自己处理，但往往就是这20%的问题，却占用了80%的时间。说GPT能解决问题吧？能！说GPT能提高效率吧？也能，但有时候也不靠谱，导致效率降低。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>GPT很好用，但最多能解决80%的问题，剩下20%还需自己处理，但往往就是这20%的问题，却占用了80%的时间。说GPT能解决问题吧？能！说GPT能提高效率吧？也能，但若是太依赖GPT，可能会被它给你绕进去，跑偏了，导致效率降低。当然，这只是新手易犯的错误，随着使用的加深，逐渐就会知道，哪些问题，GPT能回答，哪些问题不能回答。还有该如何问，才能让GPT更好的回答。进而，才能让GPT真正成为自己的效率神器！</p>
 ]]></content>
       <tags>
         <tag>Nginx</tag>
