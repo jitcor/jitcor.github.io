@@ -127,7 +127,8 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="博客加密"><a href="#博客加密" class="headerlink" title="博客加密"></a>博客加密</h2><h3 id="hexo-blog-encrypt"><a href="#hexo-blog-encrypt" class="headerlink" title="hexo-blog-encrypt"></a>hexo-blog-encrypt</h3><h2 id="博客编写"><a href="#博客编写" class="headerlink" title="博客编写"></a>博客编写</h2><h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><h3 id="WebStorm"><a href="#WebStorm" class="headerlink" title="WebStorm"></a>WebStorm</h3><h3 id="Typecho"><a href="#Typecho" class="headerlink" title="Typecho"></a>Typecho</h3><h2 id="原创保护"><a href="#原创保护" class="headerlink" title="原创保护"></a>原创保护</h2><p><a href="https://geektutu.com/post/blog-experience-4.html">https://geektutu.com/post/blog-experience-4.html</a></p>
+<h2 id="博客加密"><a href="#博客加密" class="headerlink" title="博客加密"></a>博客加密</h2><h3 id="hexo-blog-encrypt"><a href="#hexo-blog-encrypt" class="headerlink" title="hexo-blog-encrypt"></a>hexo-blog-encrypt</h3><h2 id="博客编写"><a href="#博客编写" class="headerlink" title="博客编写"></a>博客编写</h2><h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a><del>VSCode</del></h3><h3 id="WebStorm"><a href="#WebStorm" class="headerlink" title="WebStorm"></a><del>WebStorm</del></h3><h3 id="Typecho"><a href="#Typecho" class="headerlink" title="Typecho"></a>Typecho</h3><p>最后采用的这个，主要看中了其可以直接粘贴图片，自动把图片放到本地目录对应的位置，还有就是不用直接编辑md文档了，自动帮你调整好，实现所写即所得</p>
+<h2 id="原创保护"><a href="#原创保护" class="headerlink" title="原创保护"></a>原创保护</h2><p><a href="https://geektutu.com/post/blog-experience-4.html">https://geektutu.com/post/blog-experience-4.html</a></p>
 <h2 id="备用主题"><a href="#备用主题" class="headerlink" title="备用主题"></a>备用主题</h2><ul>
 <li><a href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">安知鱼</a></li>
 <li><a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a></li>
