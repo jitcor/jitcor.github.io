@@ -16,7 +16,7 @@ https://jitcor.github.io/tags/Nginx/
 https://jitcor.github.io/tags/CentOS/
 https://jitcor.github.io/tags/TCP/
 https://jitcor.github.io/tags/GPT/
-https://jitcor.github.io/tags/%E7%AB%AF%E5%8F%A3zhuan-fa/
+https://jitcor.github.io/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/
 https://jitcor.github.io/tags/github/
 https://jitcor.github.io/tags/blog/
 https://jitcor.github.io/tags/hexo/
