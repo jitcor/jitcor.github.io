@@ -56,6 +56,15 @@
   </url>
   
   <url>
+    <loc>https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
+    
+    <lastmod>2023-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jitcor.github.io/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2023-12-18</lastmod>
@@ -117,6 +126,41 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/Nginx/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/CentOS/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/TCP/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/GPT/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jitcor.github.io/tags/%E7%AB%AF%E5%8F%A3zhuan-fa/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://jitcor.github.io/tags/github/</loc>

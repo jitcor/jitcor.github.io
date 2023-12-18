@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CentOS Nginx 如何配置TCP转口转发</title>
+    <url>/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/</url>
+    <content><![CDATA[<h2 id="安装Nginx（from-GPT）"><a href="#安装Nginx（from-GPT）" class="headerlink" title="安装Nginx（from GPT）"></a>安装Nginx（from GPT）</h2><p>安装Nginx的步骤因操作系统而异。下面是在常见的操作系统上安装Nginx的方法：</p>
+<ol>
+<li>Ubuntu或Debian：<ul>
+<li>打开终端，并使用以下命令更新软件包列表：<code>sudo apt update</code></li>
+<li>安装Nginx：<code>sudo apt install nginx</code></li>
+</ul>
+</li>
+<li>CentOS或RHEL：<ul>
+<li>打开终端，并使用以下命令更新软件包列表：<code>sudo yum update</code></li>
+<li>安装Nginx：<code>sudo yum install nginx</code></li>
+</ul>
+</li>
+<li>macOS：<ul>
+<li>使用Homebrew安装Nginx：<code>brew install nginx</code></li>
+</ul>
+</li>
+<li>Windows：<ul>
+<li>下载Nginx的Windows版本（zip或msi格式）：<a href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a></li>
+<li>解压缩或运行msi文件进行安装。</li>
+</ul>
+</li>
+</ol>
+<p>安装完成后，你可以通过以下命令启动、停止或重新加载Nginx：</p>
+<ul>
+<li>启动Nginx：<code>sudo service nginx start</code>（Linux）或<code>nginx</code>（macOS&#x2F;Windows）</li>
+<li>停止Nginx：<code>sudo service nginx stop</code>（Linux）或<code>nginx -s stop</code>（macOS&#x2F;Windows）</li>
+<li>重新加载Nginx配置：<code>sudo service nginx reload</code>（Linux）或<code>nginx -s reload</code>（macOS&#x2F;Windows）</li>
+</ul>
+<p>安装完成后，你可以编辑Nginx的配置文件（通常是<code>/etc/nginx/nginx.conf</code>）来配置反向代理等功能。编辑完成后，重新加载Nginx配置以使更改生效。</p>
+<p>请注意，根据你的操作系统和安装方式，上述命令可能略有不同。建议查阅官方文档或适用于你的操作系统的特定安装指南以获取更准确的信息。</p>
+<span id="more"></span>
+
+<h2 id="转发TCP"><a href="#转发TCP" class="headerlink" title="转发TCP"></a>转发TCP</h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># from GPT</span></span><br><span class="line"><span class="section">stream</span> &#123;</span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">12345</span>;  <span class="comment"># 监听的本地端口</span></span><br><span class="line">        <span class="attribute">proxy_pass</span> backend;  <span class="comment"># 转发到的后端服务</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">upstream</span> backend &#123;</span><br><span class="line">    <span class="attribute">server</span> backend.example.com:<span class="number">54321</span>;  <span class="comment"># 后端服务的地址和端口</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以精简下</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># from https://www.jianshu.com/p/244386221cc5</span></span><br><span class="line"><span class="section">stream</span> &#123;</span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">12345</span>;  <span class="comment"># 监听的本地端口</span></span><br><span class="line">        <span class="attribute">proxy_pass</span> backend.example.com:<span class="number">54321</span>;  <span class="comment"># 转发到其他服务端口</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><blockquote>
+<h1 id="unknown-directive-“stream”-in-etc-nginx-nginx-conf"><a href="#unknown-directive-“stream”-in-etc-nginx-nginx-conf" class="headerlink" title="unknown directive “stream” in &#x2F;etc&#x2F;nginx&#x2F;nginx.conf"></a>unknown directive “stream” in &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</h1></blockquote>
+<p>初步参考的这个CSDN：<a href="https://blog.csdn.net/qq_39043100/article/details/89644264">https://blog.csdn.net/qq_39043100/article/details/89644264</a></p>
+<p>发现就是转载的别人的文章：<a href="https://www.tingtao.org/archives/1494.html">https://www.tingtao.org/archives/1494.html</a></p>
+<p>但是呢，依然没有解决我的问题，我这里压根没有这个路径</p>
+<img src="/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112644486.png" class="" title="image-20231218112644486">
+
+<p>看其评论，才发现是路径不对，经过<code>nginx -V</code>命令查询，才发现我的路径是这个</p>
+<img src="/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112848568.png" class="" title="image-20231218112848568">
+
+<p>多了个64，遂改之，仍报错，cd进入到该目录才发现，下面压根没东西</p>
+<img src="/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218113027145.png" class="" title="image-20231218113027145">
+
+<p>经过再次Google搜索，找到另一篇文章：<a href="https://book.aishangwei.net/blog-6.html">https://book.aishangwei.net/blog-6.html</a> ，原来是缺少模块，需要先安装模块</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ yum -y install nginx-mod-stream</span><br><span class="line">$ vim /etc/nginx/nginx.conf      // 载入模块</span><br><span class="line">load_module /usr/lib64/nginx/modules/ngx_stream_module.so;</span><br><span class="line">worker_processes 4;</span><br><span class="line">worker_rlimit_nofile 40000;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ systemctl start nginx</span><br></pre></td></tr></table></figure>
+
+<p>最终Nginx正常运行，不再报错，TCP端口正常转发。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>GPT很好用，但最多能解决80%的问题，剩下20%还需自己处理，但往往就是这20%的问题，却占用了80%的时间。说GPT能解决问题吧？能！说GPT能提高效率吧？也能，但有时候也不靠谱，导致效率降低。</p>
+]]></content>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>CentOS</tag>
+        <tag>TCP</tag>
+        <tag>GPT</tag>
+        <tag>端口zhuan&#39;fa</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github博客搭建笔记</title>
     <url>/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><ul>

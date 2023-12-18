@@ -19,33 +19,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"jitcor.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"right","display":"remove","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="解BL锁 开启oem fastboot oem unlock   注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决(PS:更新完别着急重启，先把OTA包备份出来好提取里面的boot.img)(更新:据酷安网友说需要刷persist分区才行，具体待测试)  Magisk 下载OTA包https:&#x2F;&#x2F;www.h2os.com&#x2F;download. 解包提取b">
+    <meta name="description" content="安装Nginx（from GPT）安装Nginx的步骤因操作系统而异。下面是在常见的操作系统上安装Nginx的方法：  Ubuntu或Debian： 打开终端，并使用以下命令更新软件包列表：sudo apt update 安装Nginx：sudo apt install nginx   CentOS或RHEL： 打开终端，并使用以下命令更新软件包列表：sudo yum update 安装Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一加6解BL锁和ROOT">
-<meta property="og:url" content="https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/index.html">
+<meta property="og:title" content="CentOS Nginx 如何配置TCP转口转发">
+<meta property="og:url" content="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/index.html">
 <meta property="og:site_name" content="逐鹿">
-<meta property="og:description" content="解BL锁 开启oem fastboot oem unlock   注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决(PS:更新完别着急重启，先把OTA包备份出来好提取里面的boot.img)(更新:据酷安网友说需要刷persist分区才行，具体待测试)  Magisk 下载OTA包https:&#x2F;&#x2F;www.h2os.com&#x2F;download. 解包提取b">
+<meta property="og:description" content="安装Nginx（from GPT）安装Nginx的步骤因操作系统而异。下面是在常见的操作系统上安装Nginx的方法：  Ubuntu或Debian： 打开终端，并使用以下命令更新软件包列表：sudo apt update 安装Nginx：sudo apt install nginx   CentOS或RHEL： 打开终端，并使用以下命令更新软件包列表：sudo yum update 安装Nginx">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/147733462-207872e5-21f5-4df6-92c7-320ae7c5ad16.png">
-<meta property="article:published_time" content="2023-12-17T08:01:54.000Z">
+<meta property="og:image" content="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112644486.png">
+<meta property="og:image" content="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112848568.png">
+<meta property="og:image" content="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218113027145.png">
+<meta property="article:published_time" content="2023-12-18T03:06:30.000Z">
 <meta property="article:modified_time" content="2023-12-18T03:47:03.549Z">
 <meta property="article:author" content="jitcor">
-<meta property="article:tag" content="BL锁">
-<meta property="article:tag" content="Magisk">
-<meta property="article:tag" content="LSPosed">
-<meta property="article:tag" content="oneplus">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="CentOS">
+<meta property="article:tag" content="TCP">
+<meta property="article:tag" content="GPT">
+<meta property="article:tag" content="端口zhuan&#39;fa">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/147733462-207872e5-21f5-4df6-92c7-320ae7c5ad16.png">
+<meta name="twitter:image" content="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112644486.png">
 
 
-<link rel="canonical" href="https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/">
+<link rel="canonical" href="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/","path":"2023/12/17/一加6解BL锁和ROOT/","title":"一加6解BL锁和ROOT"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/","path":"2023/12/18/CentOS-nginx-如何配置TCP转口转发/","title":"CentOS Nginx 如何配置TCP转口转发"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>一加6解BL锁和ROOT | 逐鹿</title>
+<title>CentOS Nginx 如何配置TCP转口转发 | 逐鹿</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5CSTBHGJ8"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-C5CSTBHGJ8","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -146,7 +149,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/">
+    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -159,12 +162,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="一加6解BL锁和ROOT | 逐鹿">
+      <meta itemprop="name" content="CentOS Nginx 如何配置TCP转口转发 | 逐鹿">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          一加6解BL锁和ROOT<a href="https://github.com/jitcor/jitcor-blog/tree/main/source/_posts/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          CentOS Nginx 如何配置TCP转口转发<a href="https://github.com/jitcor/jitcor-blog/tree/main/source/_posts/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -174,15 +177,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-12-17 16:01:54" itemprop="dateCreated datePublished" datetime="2023-12-17T16:01:54+08:00">2023-12-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-18 11:47:03" itemprop="dateModified" datetime="2023-12-18T11:47:03+08:00">2023-12-18</time>
+      <time title="创建时间：2023-12-18 11:06:30 / 修改时间：11:47:03" itemprop="dateCreated datePublished" datetime="2023-12-18T11:06:30+08:00">2023-12-18</time>
     </span>
 
   
@@ -199,7 +196,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>505</span>
+      <span>680</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -216,62 +213,61 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="解BL锁"><a href="#解BL锁" class="headerlink" title="解BL锁"></a>解BL锁</h1><ul>
-<li>开启oem</li>
-<li>fastboot oem unlock</li>
+    <div class="post-body" itemprop="articleBody"><h2 id="安装Nginx（from-GPT）"><a href="#安装Nginx（from-GPT）" class="headerlink" title="安装Nginx（from GPT）"></a>安装Nginx（from GPT）</h2><p>安装Nginx的步骤因操作系统而异。下面是在常见的操作系统上安装Nginx的方法：</p>
+<ol>
+<li>Ubuntu或Debian：<ul>
+<li>打开终端，并使用以下命令更新软件包列表：<code>sudo apt update</code></li>
+<li>安装Nginx：<code>sudo apt install nginx</code></li>
 </ul>
-<blockquote>
-<p>注：解BL锁后，Wlan无法正常使用了，即使完全还原也不行，可能需要升级到最新版固件包才能解决(PS:<br>更新完别着急重启，先把OTA包备份出来好提取里面的boot.img)(更新:据酷安网友说需要刷persist分区才行，具体待测试)</p>
-</blockquote>
-<h1 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h1><ul>
-<li>下载OTA包<a target="_blank" rel="noopener" href="https://www.h2os.com/download.">https://www.h2os.com/download.</a></li>
-<li>解包提取boot.img</li>
-<li>Magisk 对boot.img打补丁</li>
-<li>fastboot boot magisk_patch.img</li>
-<li>后面按提示操作即可</li>
+</li>
+<li>CentOS或RHEL：<ul>
+<li>打开终端，并使用以下命令更新软件包列表：<code>sudo yum update</code></li>
+<li>安装Nginx：<code>sudo yum install nginx</code></li>
 </ul>
-<blockquote>
-<p>该机型在重启手机后，会恢复boot.img，所以在每次重启之后都要进入fastboot，重新刷一次magisk boot补丁。</p>
-<p>至于模块重启生效问题，可以等安装完模块，直接强制重启到fastboot，然后再重新刷一次magisk boot补丁再重启即可。</p>
-<p>OTA包需要通过系统更新刷入。</p>
-</blockquote>
-<span id="more"></span> 
-
-<h1 id="LSPosed"><a href="#LSPosed" class="headerlink" title="LSPosed"></a>LSPosed</h1><ul>
-<li>lsposed管理器显示不激活问题</li>
+</li>
+<li>macOS：<ul>
+<li>使用Homebrew安装Nginx：<code>brew install nginx</code></li>
 </ul>
-<blockquote>
-<p>在重启第一次激活模块后，需要再次重启才能在lsposed app里显示激活</p>
-</blockquote>
-<h1 id="解包提取boot-img"><a href="#解包提取boot-img" class="headerlink" title="解包提取boot.img"></a>解包提取boot.img</h1><ul>
-<li>下载解包工具<a target="_blank" rel="noopener" href="https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15">https://gist.github.com/ius/42bd02a5df2226633a342ab7a9c60f15</a></li>
-<li>包含两个py文件payload_dumper.py，update_metadata_pb2.py</li>
-<li>或者直接当前目录下载即可</li>
-<li>pip3 install protobuf</li>
-<li>python payload_dumper.py payload.bin (payload.bin从固件包里提取即可)</li>
+</li>
+<li>Windows：<ul>
+<li>下载Nginx的Windows版本（zip或msi格式）：<a target="_blank" rel="noopener" href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a></li>
+<li>解压缩或运行msi文件进行安装。</li>
 </ul>
-<h1 id="OTA-ROM包刷机"><a href="#OTA-ROM包刷机" class="headerlink" title="OTA&#x2F;ROM包刷机"></a>OTA&#x2F;ROM包刷机</h1><ul>
-<li>下载OTA包</li>
-<li>放入手机sdcard根目录</li>
-<li>进入系统更新-&gt;设置-&gt;本地升级-&gt;找到OTA包</li>
-<li>等待更新完成重启即可</li>
-</ul>
-<h1 id="固件救砖"><a href="#固件救砖" class="headerlink" title="固件救砖"></a>固件救砖</h1><blockquote>
-<p>一次刷boot.img不小心执行了错误的命令:<code>fastboot flash boot magisk_patch.img</code>(正确的是<code>fastboot boot magisk_patch.img</code>)<br>，导致变砖，当然还能通过音量+和电源键进入fastboot模式刷固件也可以解决，不过固件包没找到，需要重新下载，那多麻烦，又发现固件救砖包倒还在，那就试下这个9008救砖吧</p>
-</blockquote>
+</li>
+</ol>
+<p>安装完成后，你可以通过以下命令启动、停止或重新加载Nginx：</p>
 <ul>
-<li>禁用驱动签名检查</li>
-<li>装9008驱动</li>
-<li>关机</li>
-<li>按住音量上键</li>
-<li>点击start</li>
-<li>连接电脑</li>
-<li>等待自动识别，并刷入固件</li>
-<li>完成图</li>
+<li>启动Nginx：<code>sudo service nginx start</code>（Linux）或<code>nginx</code>（macOS&#x2F;Windows）</li>
+<li>停止Nginx：<code>sudo service nginx stop</code>（Linux）或<code>nginx -s stop</code>（macOS&#x2F;Windows）</li>
+<li>重新加载Nginx配置：<code>sudo service nginx reload</code>（Linux）或<code>nginx -s reload</code>（macOS&#x2F;Windows）</li>
 </ul>
-<img src="/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/147733462-207872e5-21f5-4df6-92c7-320ae7c5ad16.png" class="" title="image">
+<p>安装完成后，你可以编辑Nginx的配置文件（通常是<code>/etc/nginx/nginx.conf</code>）来配置反向代理等功能。编辑完成后，重新加载Nginx配置以使更改生效。</p>
+<p>请注意，根据你的操作系统和安装方式，上述命令可能略有不同。建议查阅官方文档或适用于你的操作系统的特定安装指南以获取更准确的信息。</p>
+<span id="more"></span>
 
-<h1 id="全部资料"><a href="#全部资料" class="headerlink" title="全部资料"></a>全部资料</h1><p><a target="_blank" rel="noopener" href="https://cloud.189.cn/t/jAJJBjbM7f6z">https://cloud.189.cn/t/jAJJBjbM7f6z</a> (访问码:5l7k)</p>
+<h2 id="转发TCP"><a href="#转发TCP" class="headerlink" title="转发TCP"></a>转发TCP</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># from GPT</span></span><br><span class="line"><span class="section">stream</span> &#123;</span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">12345</span>;  <span class="comment"># 监听的本地端口</span></span><br><span class="line">        <span class="attribute">proxy_pass</span> backend;  <span class="comment"># 转发到的后端服务</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">upstream</span> backend &#123;</span><br><span class="line">    <span class="attribute">server</span> backend.example.com:<span class="number">54321</span>;  <span class="comment"># 后端服务的地址和端口</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以精简下</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># from https://www.jianshu.com/p/244386221cc5</span></span><br><span class="line"><span class="section">stream</span> &#123;</span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">12345</span>;  <span class="comment"># 监听的本地端口</span></span><br><span class="line">        <span class="attribute">proxy_pass</span> backend.example.com:<span class="number">54321</span>;  <span class="comment"># 转发到其他服务端口</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><blockquote>
+<h1 id="unknown-directive-“stream”-in-etc-nginx-nginx-conf"><a href="#unknown-directive-“stream”-in-etc-nginx-nginx-conf" class="headerlink" title="unknown directive “stream” in &#x2F;etc&#x2F;nginx&#x2F;nginx.conf"></a>unknown directive “stream” in &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</h1></blockquote>
+<p>初步参考的这个CSDN：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39043100/article/details/89644264">https://blog.csdn.net/qq_39043100/article/details/89644264</a></p>
+<p>发现就是转载的别人的文章：<a target="_blank" rel="noopener" href="https://www.tingtao.org/archives/1494.html">https://www.tingtao.org/archives/1494.html</a></p>
+<p>但是呢，依然没有解决我的问题，我这里压根没有这个路径</p>
+<img src="/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112644486.png" class="" title="image-20231218112644486">
+
+<p>看其评论，才发现是路径不对，经过<code>nginx -V</code>命令查询，才发现我的路径是这个</p>
+<img src="/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218112848568.png" class="" title="image-20231218112848568">
+
+<p>多了个64，遂改之，仍报错，cd进入到该目录才发现，下面压根没东西</p>
+<img src="/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20231218113027145.png" class="" title="image-20231218113027145">
+
+<p>经过再次Google搜索，找到另一篇文章：<a target="_blank" rel="noopener" href="https://book.aishangwei.net/blog-6.html">https://book.aishangwei.net/blog-6.html</a> ，原来是缺少模块，需要先安装模块</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install nginx-mod-stream</span><br><span class="line">$ vim /etc/nginx/nginx.conf      // 载入模块</span><br><span class="line">load_module /usr/lib64/nginx/modules/ngx_stream_module.so;</span><br><span class="line">worker_processes 4;</span><br><span class="line">worker_rlimit_nofile 40000;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ systemctl start nginx</span><br></pre></td></tr></table></figure>
+
+<p>最终Nginx正常运行，不再报错，TCP端口正常转发。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>GPT很好用，但最多能解决80%的问题，剩下20%还需自己处理，但往往就是这20%的问题，却占用了80%的时间。说GPT能解决问题吧？能！说GPT能提高效率吧？也能，但有时候也不靠谱，导致效率降低。</p>
 
     </div>
 
@@ -289,7 +285,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jitcor.github.io/2023/12/17/%E4%B8%80%E5%8A%A06%E8%A7%A3BL%E9%94%81%E5%92%8CROOT/" title="一加6解BL锁和ROOT">https://jitcor.github.io/2023/12/17/一加6解BL锁和ROOT/</a>
+      <a href="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/" title="CentOS Nginx 如何配置TCP转口转发">https://jitcor.github.io/2023/12/18/CentOS-nginx-如何配置TCP转口转发/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -298,24 +294,22 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/BL%E9%94%81/" rel="tag"># BL锁</a>
-              <a href="/tags/Magisk/" rel="tag"># Magisk</a>
-              <a href="/tags/LSPosed/" rel="tag"># LSPosed</a>
-              <a href="/tags/oneplus/" rel="tag"># oneplus</a>
+              <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+              <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+              <a href="/tags/TCP/" rel="tag"># TCP</a>
+              <a href="/tags/GPT/" rel="tag"># GPT</a>
+              <a href="/tags/%E7%AB%AF%E5%8F%A3zhuan-fa/" rel="tag"># 端口zhuan'fa</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/12/17/%E8%87%AA%E7%94%A8Linux%E5%A5%BD%E8%BD%AFTOP3/" rel="prev" title="自用Linux好软TOP3">
-                  <i class="fa fa-angle-left"></i> 自用Linux好软TOP3
+                <a href="/2023/12/17/git-add-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9Fgit-commit-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9Fgit-push-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9F/" rel="prev" title="git add 如何撤回？git commit 如何撤回？git push 如何撤回？">
+                  <i class="fa fa-angle-left"></i> git add 如何撤回？git commit 如何撤回？git push 如何撤回？
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/12/17/git-add-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9Fgit-commit-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9Fgit-push-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9F/" rel="next" title="git add 如何撤回？git commit 如何撤回？git push 如何撤回？">
-                  git add 如何撤回？git commit 如何撤回？git push 如何撤回？ <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
