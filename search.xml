@@ -91,8 +91,8 @@
 <h2 id="具体搭建过程"><a href="#具体搭建过程" class="headerlink" title="具体搭建过程"></a>具体搭建过程</h2><p>大部分参考的这一教程：<a href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo搭建个人博客网站，史上最全教程</a><br>，唯一改动的就是主题换成了安知鱼，难点主要是nodejs使用,hexo使用,github一键部署</p>
 <h3 id="安知鱼主题"><a href="#安知鱼主题" class="headerlink" title="安知鱼主题"></a>安知鱼主题</h3><p>文档：<a href="https://docs.anheyu.com/intro.html">https://docs.anheyu.com/intro.html</a></p>
 <blockquote>
-</blockquote>
 <p>配置到最后发现，还是NexT主题符合我的目标，简单快速易上手，安知鱼加载缓慢，编译缓慢，界面元素太多，要配置的东西也太多，逐渐偏离我的初心，我的初心不是搭建博客，而是在github做笔记的同时随便搞下博客，方便后续阅读，NexT简单配置下就行了，啥也不用管，配置完跟之前在github写md一样，只不过现在写完会自动转为博客，但安知鱼纯粹是为了写博客了。所以明白了<br>这点后，果断转了NexT。</p>
+</blockquote>
 <h3 id="NexT主题"><a href="#NexT主题" class="headerlink" title="NexT主题"></a>NexT主题</h3><p>主题进阶设置：<a href="https://www.qtmuniao.com/2019/10/16/hexo-theme-landscaping/">https://www.qtmuniao.com/2019/10/16/hexo-theme-landscaping/</a></p>
 <span id="more"></span> 
 
@@ -106,7 +106,20 @@
 <p>不过目前还在申请中，需要过一天才能查看</p>
 <img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/image-20231218131639521.png" class="" title="image-20231218131639521">
 
+<p>又过了几天，还是这样的提示，emmmm…，不过bing的审核挺快的，一天不到就完成了，申请地址：<a href="https://www.bing.com/webmasters">https://www.bing.com/webmasters</a></p>
+<img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/image-20231221105723980.png" class="" title="image-20231221105723980">
+
+<p>至于百度，就算了，不仅索要的资料超多，微信，QQ，手机号，邮箱，就差身份证信息没给了，最后还给我来个这，得，放弃了，反正现在也用不到百度了</p>
+<img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/image-20231221110156359.png" class="" title="image-20231221110156359">
+
+
+
 <h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><h2 id="github-pages-安全机制"><a href="#github-pages-安全机制" class="headerlink" title="github pages 安全机制"></a>github pages 安全机制</h2><img src="/2023/12/14/Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/gh-pages-sec.png" class="" title="image">
+
+<p>pubKey &amp;priKey</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;<span class="subst">$(git config user.email)</span>&quot;</span> -f gh-pages -N <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+
 
 
 <h2 id="填坑"><a href="#填坑" class="headerlink" title="填坑"></a>填坑</h2><ul>
