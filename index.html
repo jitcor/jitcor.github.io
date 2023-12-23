@@ -138,6 +138,179 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/23/Python-%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E5%B9%B6%E6%8F%90%E5%8F%96outlook%E9%82%AE%E7%AE%B1%E7%9A%84%E6%9C%80%E6%96%B0%E9%AA%8C%E8%AF%81%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="jitcor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿">
+      <meta itemprop="description" content="你可以选择做与不做，但请不要纠结做与不做，更不要纠结过去做出的选择，只管大步向前走，与其纠结于过去已经发生无法改变的，倒不如着眼于将来还未发生可以改变的">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 逐鹿">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/23/Python-%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E5%B9%B6%E6%8F%90%E5%8F%96outlook%E9%82%AE%E7%AE%B1%E7%9A%84%E6%9C%80%E6%96%B0%E9%AA%8C%E8%AF%81%E7%A0%81/" class="post-title-link" itemprop="url">Python 实现登录并提取outlook邮箱的最新验证码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-23 18:29:49 / 修改时间：18:34:41" itemprop="dateCreated datePublished" datetime="2023-12-23T18:29:49+08:00">2023-12-23</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>217</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># by </span></span><br><span class="line"><span class="keyword">import</span> email</span><br><span class="line"><span class="keyword">import</span> imaplib</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_emails</span>(<span class="params">username, password, match_reg, group_index, timeout</span>):</span><br><span class="line">    <span class="comment"># 连接到邮箱服务器</span></span><br><span class="line">    imap_server = imaplib.IMAP4_SSL(<span class="string">&#x27;imap-mail.outlook.com&#x27;</span>)</span><br><span class="line">    imap_server.login(username, password)</span><br><span class="line">    imap_server.select(<span class="string">&#x27;INBOX&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># 搜索匹配的邮件</span></span><br><span class="line">        result, data = imap_server.search(<span class="literal">None</span>, <span class="string">&#x27;ALL&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> result != <span class="string">&#x27;OK&#x27;</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;搜索邮件失败&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> data[<span class="number">0</span>].split():</span><br><span class="line">            <span class="comment"># 获取邮件内容</span></span><br><span class="line">            result, data = imap_server.fetch(num, <span class="string">&#x27;(RFC822)&#x27;</span>)</span><br><span class="line">            <span class="keyword">if</span> result != <span class="string">&#x27;OK&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;获取邮件失败&#x27;</span>)</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">            raw_email = data[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">            <span class="comment"># 解析邮件内容</span></span><br><span class="line">            email_message = email.message_from_bytes(raw_email)</span><br><span class="line">            <span class="comment"># 遍历邮件的各个部分</span></span><br><span class="line">            <span class="keyword">for</span> part <span class="keyword">in</span> email_message.walk():</span><br><span class="line">                content_type = part.get_content_type()</span><br><span class="line">                <span class="keyword">if</span> content_type == <span class="string">&#x27;text/plain&#x27;</span>:</span><br><span class="line">                    email_content = part.get_payload(decode=<span class="literal">True</span>).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">                    <span class="comment"># 使用正则表达式匹配内容</span></span><br><span class="line">                    <span class="keyword">match</span> = re.search(match_reg, email_content)</span><br><span class="line">                    <span class="keyword">if</span> <span class="keyword">match</span>:</span><br><span class="line">                        <span class="comment"># 提取匹配的内容</span></span><br><span class="line">                        code = <span class="keyword">match</span>.group(group_index)</span><br><span class="line">                        <span class="built_in">print</span>(<span class="string">&#x27;提取到的内容:&#x27;</span>, code)</span><br><span class="line">                        <span class="keyword">return</span> code</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果超时，则退出循环</span></span><br><span class="line">        <span class="keyword">if</span> time.time() - start_time &gt; timeout:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;超时&#x27;</span>)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 休眠一段时间后再继续搜索</span></span><br><span class="line">        time.sleep(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 关闭连接</span></span><br><span class="line">    imap_server.close()</span><br><span class="line">    imap_server.logout()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    extract_emails(<span class="string">&quot;xxxxxxx@hotmail.com&quot;</span>,<span class="string">&quot;xxxxxx&quot;</span>,<span class="string">r&quot;验证码[\s\S]*?(\d+)&quot;</span>,<span class="number">1</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/23/Burp-Suite-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%A0%B9%E6%8D%AEContent-Encoding%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="jitcor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿">
+      <meta itemprop="description" content="你可以选择做与不做，但请不要纠结做与不做，更不要纠结过去做出的选择，只管大步向前走，与其纠结于过去已经发生无法改变的，倒不如着眼于将来还未发生可以改变的">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 逐鹿">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/23/Burp-Suite-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%A0%B9%E6%8D%AEContent-Encoding%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Burp Suite 自定义扩展之自动根据Content-Encoding对数据进行解码操作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-23 16:00:37 / 修改时间：18:34:41" itemprop="dateCreated datePublished" datetime="2023-12-23T16:00:37+08:00">2023-12-23</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>已安装的扩展</p>
+<img src="/2023/12/23/Burp-Suite-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%A0%B9%E6%8D%AEContent-Encoding%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E6%93%8D%E4%BD%9C/image-20231223161218874.png" class="" title="image-20231223161218874">
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/18/CentOS-nginx-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AETCP%E8%BD%AC%E5%8F%A3%E8%BD%AC%E5%8F%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -174,7 +347,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
 
   
@@ -301,7 +474,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
 
   
@@ -404,7 +577,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
 
   
@@ -520,7 +693,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -627,7 +800,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -756,7 +929,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -880,7 +1053,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
 
   
@@ -982,7 +1155,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-23 02:25:07" itemprop="dateModified" datetime="2023-12-23T02:25:07+08:00">2023-12-23</time>
+      <time title="修改时间：2023-12-23 18:34:41" itemprop="dateModified" datetime="2023-12-23T18:34:41+08:00">2023-12-23</time>
     </span>
 
   
@@ -1087,7 +1260,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
