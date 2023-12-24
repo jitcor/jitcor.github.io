@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_k9-wHy1VDIAHZKG_dwb8bAsSbC79pkgxq5gkihjwx8">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jitcor.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"right","display":"remove","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="电脑远程RDP，登录卡在：Please Wait… 解决方案参考：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;568825875，介绍很全，实测方案7有效，直接手机端安装aRDP Free 登录，开源地址：https:&#x2F;&#x2F;github.com&#x2F;iiordanov&#x2F;remote-desktop-clients，为防止以后再出现这类问题，遂准备买个显示器 显示器选购方案：https:&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PC 主机日常维护笔记">
+<meta property="og:url" content="https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="逐鹿">
+<meta property="og:description" content="电脑远程RDP，登录卡在：Please Wait… 解决方案参考：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;568825875，介绍很全，实测方案7有效，直接手机端安装aRDP Free 登录，开源地址：https:&#x2F;&#x2F;github.com&#x2F;iiordanov&#x2F;remote-desktop-clients，为防止以后再出现这类问题，遂准备买个显示器 显示器选购方案：https:&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/image-20231225013944980.png">
+<meta property="article:published_time" content="2023-12-24T17:33:14.000Z">
+<meta property="article:modified_time" content="2023-12-24T17:51:50.421Z">
+<meta property="article:author" content="jitcor">
+<meta property="article:tag" content="PC">
+<meta property="article:tag" content="RDP">
+<meta property="article:tag" content="显示器">
+<meta property="article:tag" content="音响">
+<meta property="article:tag" content="清灰">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/image-20231225013944980.png">
+
+
+<link rel="canonical" href="https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/","path":"2023/12/24/PC-主机日常维护笔记/","title":"PC 主机日常维护笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PC 主机日常维护笔记 | 逐鹿</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5CSTBHGJ8"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-C5CSTBHGJ8","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?79e9f64b8947fd51b7be8302569643bf"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">逐鹿</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">晴耕雨读，心灯不夜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="jitcor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿">
+      <meta itemprop="description" content="你可以选择做与不做，但请不要纠结做与不做，更不要纠结过去做出的选择，只管大步向前走，与其纠结于过去已经发生无法改变的，倒不如着眼于将来还未发生可以改变的">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PC 主机日常维护笔记 | 逐鹿">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PC 主机日常维护笔记<a href="https://github.com/jitcor/jitcor-blog/tree/main/source/_posts/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-25 01:33:14 / 修改时间：01:51:50" itemprop="dateCreated datePublished" datetime="2023-12-25T01:33:14+08:00">2023-12-25</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>341</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p> 电脑远程RDP，登录卡在：Please Wait…</p>
+<p>解决方案参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/568825875%EF%BC%8C%E4%BB%8B%E7%BB%8D%E5%BE%88%E5%85%A8%EF%BC%8C%E5%AE%9E%E6%B5%8B%E6%96%B9%E6%A1%887%E6%9C%89%E6%95%88%EF%BC%8C%E7%9B%B4%E6%8E%A5%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%AE%89%E8%A3%85aRDP">https://zhuanlan.zhihu.com/p/568825875，介绍很全，实测方案7有效，直接手机端安装aRDP</a> Free 登录，开源地址：<a target="_blank" rel="noopener" href="https://github.com/iiordanov/remote-desktop-clients%EF%BC%8C%E4%B8%BA%E9%98%B2%E6%AD%A2%E4%BB%A5%E5%90%8E%E5%86%8D%E5%87%BA%E7%8E%B0%E8%BF%99%E7%B1%BB%E9%97%AE%E9%A2%98%EF%BC%8C%E9%81%82%E5%87%86%E5%A4%87%E4%B9%B0%E4%B8%AA%E6%98%BE%E7%A4%BA%E5%99%A8">https://github.com/iiordanov/remote-desktop-clients，为防止以后再出现这类问题，遂准备买个显示器</a></p>
+<p>显示器选购方案：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24590758%EF%BC%8C%E6%A0%B8%E5%BF%83%E5%B0%B1%E4%B8%80%E5%BC%A0%E5%9B%BE%EF%BC%9A">https://www.zhihu.com/question/24590758，核心就一张图：</a></p>
+<img src="/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/image-20231225013944980.png" class="" title="image-20231225013944980">
+
+<p>这里我买的27寸，红米 4k显示器，JD地址：<a target="_blank" rel="noopener" href="https://item.m.jd.com/product/100024459181.html?utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&gx=RnAogDsFPG6NgcBZ_sA9&gxd=RnAolTVaPGXbyJgSpoMiWx5ibErmNF5PRs_sgH2xakxD5pcogEvuTxzUXpBaKok">https://item.m.jd.com/product/100024459181.html?utm_source=iosapp&amp;utm_medium=appshare&amp;utm_campaign=t_335139774&amp;utm_term=CopyURL&amp;ad_od=share&amp;gx=RnAogDsFPG6NgcBZ_sA9&amp;gxd=RnAolTVaPGXbyJgSpoMiWx5ibErmNF5PRs_sgH2xakxD5pcogEvuTxzUXpBaKok</a></p>
+<p>买了显示器，肯定还得配个音响才行，参考选配方案：<a target="_blank" rel="noopener" href="https://www.zhihu.com/tardis/zm/art/161741446?source_id=1003%EF%BC%8C%E8%BF%99%E9%87%8C%E6%88%91%E4%B9%B0%E7%9A%84%E6%BC%AB%E6%AD%A5%E8%80%85%EF%BC%8C%E5%AF%B9%E6%88%91%E6%9D%A5%E8%AF%B4%E5%9F%BA%E6%9C%AC%E4%B8%8A%E5%A4%9F%E7%94%A8%E5%B0%B1%E8%A1%8C%EF%BC%8CJD%E5%9C%B0%E5%9D%80%EF%BC%9Ahttps://item.m.jd.com/product/136358.html?utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&gx=RnAogDsFPG6NgcBZ_sA9&gxd=RnAolTVaPGXbyJgSpoMiWx5ibErmNF5PRs_sgH2xakxD5pcogEvuTxzUXpBaKok">https://www.zhihu.com/tardis/zm/art/161741446?source_id=1003，这里我买的漫步者，对我来说基本上够用就行，JD地址：https://item.m.jd.com/product/136358.html?utm_source=iosapp&amp;utm_medium=appshare&amp;utm_campaign=t_335139774&amp;utm_term=CopyURL&amp;ad_od=share&amp;gx=RnAogDsFPG6NgcBZ_sA9&amp;gxd=RnAolTVaPGXbyJgSpoMiWx5ibErmNF5PRs_sgH2xakxD5pcogEvuTxzUXpBaKok</a></p>
+<p>显示器音响到货后，立马装配，连接HDMI后，显示器提示无信号，解决方案：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/45831603">https://www.zhihu.com/question/45831603</a> ，实测有效方案：</p>
+<p>拆笔记本，断开所有连接，电源后，按开机键 5次，释放静电，而后再接上电源和HDMI，立马恢复。</p>
+<p>后面感觉PC主机的风扇声音感觉变大了很多，于是拆机，发现里面很多灰尘，遂研究怎么清灰，参考了网上解决方案：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26416421%EF%BC%8C%E5%87%86%E5%A4%87%E7%9B%B4%E6%8E%A5%E4%B9%B0%E4%B8%AA%E9%99%A4%E5%B0%98%E5%90%B9%E9%A3%8E%E6%9C%BA%EF%BC%8C%E7%AE%80%E5%8D%95%E5%BF%AB%E6%8D%B7%E6%B8%85%E7%81%B0%E5%BD%BB%E5%BA%95">https://zhuanlan.zhihu.com/p/26416421，准备直接买个除尘吹风机，简单快捷清灰彻底</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>jitcor
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jitcor.github.io/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/" title="PC 主机日常维护笔记">https://jitcor.github.io/2023/12/24/PC-主机日常维护笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/PC/" rel="tag"># PC</a>
+              <a href="/tags/RDP/" rel="tag"># RDP</a>
+              <a href="/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/" rel="tag"># 显示器</a>
+              <a href="/tags/%E9%9F%B3%E5%93%8D/" rel="tag"># 音响</a>
+              <a href="/tags/%E6%B8%85%E7%81%B0/" rel="tag"># 清灰</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/12/23/Python-%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E5%B9%B6%E6%8F%90%E5%8F%96outlook%E9%82%AE%E7%AE%B1%E7%9A%84%E6%9C%80%E6%96%B0%E9%AA%8C%E8%AF%81%E7%A0%81/" rel="prev" title="Python 实现登录并提取outlook邮箱的最新验证码">
+                  <i class="fa fa-angle-left"></i> Python 实现登录并提取outlook邮箱的最新验证码
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments"><div id="twikoo-comments"></div></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">jitcor</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">6k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">21 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/jitcor" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":false,"envId":"https://jitcor-github-blog.hf.space","el":"#twikoo-comments"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.twikoo.el)
+    .then(() => NexT.utils.getScript(
+      CONFIG.twikoo.jsUrl || 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
+      { condition: window.twikoo }
+    ))
+    .then(() => {
+      twikoo.init(CONFIG.twikoo);
+    });
+});
+</script>
+<style>
+.post-block, .comments {
+  overflow: visible;
+}
+.tk-owo-emotion {
+  display: inline-block;
+}
+</style>
+
+</body>
+</html>
