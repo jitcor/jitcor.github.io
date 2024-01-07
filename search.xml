@@ -186,6 +186,85 @@
       </tags>
   </entry>
   <entry>
+    <title>Navicat 15安装与激活</title>
+    <url>/2024/01/07/Navicat-15%E5%AE%89%E8%A3%85%E4%B8%8E%E6%BF%80%E6%B4%BB/</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
+<li><a href="http://www.navicat.com.cn/download/navicat-premium">Navicat15 官网下载地址</a>  <blockquote>
+<p>选择复制链接<br> 会得到 <a href="https://download.navicat.com.cn/download/navicat150_premium_cs_x64.exe">https://download.navicat.com.cn/download/navicat150_premium_cs_x64.exe</a><br> 修改其中的 navicat160_premium_cs_x64.exe 把 160 改成 150 就是下载 15 版本<br> 同理 140 对应 14 版本</p>
+</blockquote>
+</li>
+<li><a href="https://sourceforge.net/projects/xampp/files/">XAMPP 官网下载</a></li>
+</ul>
+<h3 id="简单的使用说明"><a href="#简单的使用说明" class="headerlink" title="简单的使用说明"></a>简单的使用说明</h3><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>仅供学习使用，学习使用，学习使用，还是要支持正版</li>
+<li>激活的时候断网！断网！断网！</li>
+<li>先打开注册机 patch(patch的路径就是你安装navicat根目录下navicat.exe文件选中点击path即可)完出现navicat.exe -x64 -&gt; cracked 再继续选择下面的操作<br><strong>！！！先打开注册机patch成功后再打开navicat，切记切记切记！！</strong>    </li>
+<li>假如没安装成功检查是否以前有安装过，清理安装记录，清理注册表之类的</li>
+</ul>
+<span id="more"></span>
+
+<hr>
+<h4 id="！！！假如出这样的错大致原因"><a href="#！！！假如出这样的错大致原因" class="headerlink" title="！！！假如出这样的错大致原因"></a>！！！假如出这样的错大致原因</h4><p><img src="https://user-images.githubusercontent.com/21699695/117238464-84ea3600-ae5f-11eb-85a7-1dc648bc1bd3.png" alt="image"></p>
+<ul>
+<li>注册机没patch完就打开了Navicat</li>
+<li>先退出所有杀毒软件，再打开注册机</li>
+</ul>
+<h3 id="简单步骤"><a href="#简单步骤" class="headerlink" title="简单步骤"></a>简单步骤</h3><ul>
+<li>1，License里选中Enterprise、在Produce里选择Premium、在Languages里选择Simplified Chinese(简体中文)</li>
+</ul>
+<p> <img src="https://user-images.githubusercontent.com/21699695/117237744-253f5b00-ae5e-11eb-8852-e3dda6ee81d6.png" alt="image">  </p>
+<ul>
+<li>2，选择Site License</li>
+</ul>
+<p> <img src="https://user-images.githubusercontent.com/21699695/117237814-47d17400-ae5e-11eb-8580-b17948158cdd.png" alt="image">  </p>
+<ul>
+<li>3，点击Generate按钮就会生成一个许可证秘钥，将许可证秘钥复制后就打开Navicat Premium 15</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/21699695/117237869-6899c980-ae5e-11eb-8ca0-772e35c0d519.png" alt="image">  </p>
+<ul>
+<li>4，打开Navicat Premium 15，点击注册</li>
+</ul>
+<div align="left">
+  <img src="https://user-images.githubusercontent.com/21699695/117237941-8cf5a600-ae5e-11eb-82f4-4b7c168ec17b.png" alt="Editor" width="500">
+</div>
+
+<ul>
+<li>5，粘贴秘钥，然后点击激活按钮</li>
+</ul>
+<div align="left">
+  <img src="https://user-images.githubusercontent.com/21699695/117237989-abf43800-ae5e-11eb-8d73-23c0f01a4720.png" alt="Editor" width="500">
+</div>
+
+<ul>
+<li>6，在弹出的界面选择手动激活</li>
+</ul>
+<div align="left">
+  <img src="https://user-images.githubusercontent.com/21699695/117238026-b6163680-ae5e-11eb-8ff5-38661aa402aa.png" alt="Editor" width="500">
+</div>
+
+<ul>
+<li>7，将请求码粘贴到注册机Request Code框中（完整过程看图）</li>
+</ul>
+<div align="left">
+  <img src="https://user-images.githubusercontent.com/21699695/117238049-c7f7d980-ae5e-11eb-80a5-d5545ab6a4d4.png" alt="Editor" width="500">
+</div>
+
+<ul>
+<li>8，点击激活页面的激活弹出（说明激活成功）</li>
+</ul>
+<div align="left">
+  <img src="https://user-images.githubusercontent.com/21699695/117238063-ce865100-ae5e-11eb-83d8-870e837517d8.png" alt="Editor" width="200">
+</div>
+
+
+<blockquote>
+<p>恭喜，激活成功啦！！如果经济允许，还是希望可以支持正版！！！<br>附上购买地址<a href="http://www.navicat.com.cn/download/navicat-premium">http://www.navicat.com.cn/download/navicat-premium</a></p>
+</blockquote>
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>[Navicat Keygen Patch v5.6.0 DFoX.zip](.&#x2F;Navicat-15安装与激活\Navicat Keygen Patch v5.6.0 DFoX.zip)</p>
+<p><a href="Navicat-15%E5%AE%89%E8%A3%85%E4%B8%8E%E6%BF%80%E6%B4%BB%5Cnavicat150_premium_cs_x64.exe">navicat150_premium_cs_x64.exe</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>PC 主机日常维护笔记</title>
     <url>/2023/12/24/PC-%E4%B8%BB%E6%9C%BA%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p> 电脑远程RDP，登录卡在：Please Wait…</p>
@@ -214,6 +293,22 @@
 
 <p>一机三用，真的香！</p>
 <p>后面准备再换个力胜的鼠标，这个鼠标手感有点差，插头也接触不良了</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>后面又1200卖了投影仪，买了个五六十的机顶盒，直接变成一机四用了，突然感觉这屏幕买的超值！！</p>
+<h1 id="0463e083a100f3854d36939772cc47e4a1702ba0"><a href="#0463e083a100f3854d36939772cc47e4a1702ba0" class="headerlink" title="&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 0463e083a100f3854d36939772cc47e4a1702ba0"></a>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 0463e083a100f3854d36939772cc47e4a1702ba0</h1><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>0463e083a100f3854d36939772cc47e4a1702ba0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 ]]></content>
       <tags>
         <tag>PC</tag>
@@ -274,6 +369,13 @@
       <tags>
         <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>github action 使用笔记</title>
+    <url>/2023/12/29/github-action-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p> action权限：<a href="https://github.com/orgs/community/discussions/60820">https://github.com/orgs/community/discussions/60820</a></p>
+<p>发布版本actions: <a href="https://github.com/svenstaro/upload-release-action">https://github.com/svenstaro/upload-release-action</a></p>
+]]></content>
   </entry>
   <entry>
     <title>一加6解BL锁和ROOT</title>
