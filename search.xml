@@ -334,6 +334,17 @@
       </tags>
   </entry>
   <entry>
+    <title>fastadmin 开发笔记</title>
+    <url>/2024/01/14/fastadmin-%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p>问：<code>你好，我[下载](https://www.fastadmin.net/download.html)了Fastadmin的完整包。前台页面要开发的话是不是在application/index下面去添加。还是能在插件里面去添加的。还是说在其它地方。</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">答：</span><br><span class="line">js在这里：/public/assets/js/frontend/*.js</span><br><span class="line">控制器在这：/application/index/controller/*.php</span><br><span class="line">视图在这：/application/index/view/*.html</span><br></pre></td></tr></table></figure>
+
+<p>续问：<code>你好，大佬。那插件的前台页面怎么启用呢？就是前端访问的时候要是插件开发的前端？</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">启用？如果你是要在插件上二开的话，代码和页面在/addons/插件名/controller和/addons/插件名/view</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>git add 如何撤回？git commit 如何撤回？git push 如何撤回？</title>
     <url>/2023/12/17/git-add-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9Fgit-commit-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9Fgit-push-%E5%A6%82%E4%BD%95%E6%92%A4%E5%9B%9E%EF%BC%9F/</url>
     <content><![CDATA[<h2 id="修改commit（撤回git-add-和git-commit）"><a href="#修改commit（撤回git-add-和git-commit）" class="headerlink" title="修改commit（撤回git add 和git commit）"></a>修改commit（撤回git add 和git commit）</h2><blockquote>
@@ -369,6 +380,19 @@
       <tags>
         <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>git 日常操作</title>
+    <url>/2024/01/19/git-%E6%97%A5%E5%B8%B8%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="hooks"><a href="#hooks" class="headerlink" title="hooks"></a>hooks</h2><h3 id="pre-commit"><a href="#pre-commit" class="headerlink" title="pre-commit"></a>pre-commit</h3><ul>
+<li>版本自增</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">old_ver1=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $1&#125;&#x27;)</span><br><span class="line">old_ver2=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line">old_ver3=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $3&#125;&#x27;)</span><br><span class="line">new_ver3=$((old_ver3+1))</span><br><span class="line">new_ver=$old_ver1.$old_ver2.$new_ver3</span><br><span class="line">git tag $new_ver</span><br><span class="line">echo -n $new_ver &gt; version</span><br><span class="line">git add -A</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需要先初始化一个version文件，并写入初始版本，格式为<code>1.0.3</code></p>
+</blockquote>
+]]></content>
   </entry>
   <entry>
     <title>github action 使用笔记</title>
