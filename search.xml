@@ -387,11 +387,16 @@
     <content><![CDATA[<h2 id="hooks"><a href="#hooks" class="headerlink" title="hooks"></a>hooks</h2><h3 id="pre-commit"><a href="#pre-commit" class="headerlink" title="pre-commit"></a>pre-commit</h3><ul>
 <li>版本自增</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">old_ver1=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $1&#125;&#x27;)</span><br><span class="line">old_ver2=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line">old_ver3=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $3&#125;&#x27;)</span><br><span class="line">new_ver3=$((old_ver3+1))</span><br><span class="line">new_ver=$old_ver1.$old_ver2.$new_ver3</span><br><span class="line">git tag $new_ver</span><br><span class="line">echo -n $new_ver &gt; version</span><br><span class="line">git add -A</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">old_ver1=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $1&#125;&#x27;)</span><br><span class="line">old_ver2=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line">old_ver3=$(cat version | awk -F&quot;.&quot; &#x27;&#123;print $3&#125;&#x27;)</span><br><span class="line">new_ver3=$((old_ver3+1))</span><br><span class="line">new_ver=$old_ver1.$old_ver2.$new_ver3</span><br><span class="line">echo -n $new_ver &gt; version</span><br><span class="line">sed -i  &quot;s/xxxlib@.*/xxxlib@$new_ver/&quot; README.md</span><br><span class="line">git add -A</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>需要先初始化一个version文件，并写入初始版本，格式为<code>1.0.3</code></p>
 </blockquote>
+<h3 id="pre-push"><a href="#pre-push" class="headerlink" title="pre-push"></a>pre-push</h3><ul>
+<li>自动更新tag</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">git tag $(cat version)</span><br><span class="line">git push --no-verify origin $(cat version)</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
